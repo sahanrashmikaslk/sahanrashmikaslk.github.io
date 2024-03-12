@@ -55,15 +55,19 @@ a:hover {
   color: grey;
   text-decoration: underline;
   text-underline-offset: 1rem;
-  text-decoration-color: rgb(181, 181, 181);
+  text-decoration-color: rgb(181, 181, 180);
 }
 
 .logo {
   font-size: 2rem;
+  
 }
 
 .logo:hover {
   cursor: default;
+  color: grey;
+
+  text-decoration-color: rgb(181, 181, 181);
 }
 
 /* HAMBURGER MENU */
