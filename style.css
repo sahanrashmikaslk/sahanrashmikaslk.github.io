@@ -66,7 +66,6 @@ a:hover {
 .logo:hover {
   cursor: default;
   color: grey;
-
   text-decoration-color: rgb(181, 181, 181);
 }
 
