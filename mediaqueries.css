@@ -38,9 +38,13 @@
       margin: 0 5%;
     }
     .section__pic-container {
+      margin-top: 4rem;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: auto;
       width: 275px;
       height: 275px;
-      margin: 0 auto 2rem;
+      
     }
     .about-containers {
       margin-top: 0;
