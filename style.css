@@ -23,7 +23,7 @@ p {
 
 a,
 .btn {
-  transition: all 300ms ease;
+  transition: all 0.4 ease;
 }
 
 /* DESKTOP NAV */
@@ -439,5 +439,5 @@ footer p {
     position: fixed;
     width:100%;
     z-index: 100;
-    background-color: #fff; opacity: 0.9; filter: alpha(opacity=50);
+    background-color:#ffff; opacity: 0.8; filter: alpha(opacity=50);
 }
