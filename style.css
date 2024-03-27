@@ -315,7 +315,7 @@ section {
 .section__pic-container {
   height: 400px;
   width: 400px;
-  margin: auto 0;
+  margin: auto ;
 }
 
 /* EXPERIENCE SECTION */
@@ -370,8 +370,27 @@ article .icon {
 
 .project-img {
   border-radius: 2rem;
-  width: 90%;
-  height: 90%;
+  width: 100%;
+  height: auto;
+  footer {
+    position: fixed; /* Change to 'fixed' to position it at the bottom of the viewport */
+    bottom: 0; /* Position the footer at the bottom of the viewport */
+    width: 100%; /* Set the width to fill the entire viewport */
+    height: 26vh; /* You may adjust the height as needed */
+    background-color: white; /* Add background color */
+    border-top: 1px solid #ddd; /* Add a border at the top of the footer for separation */
+    padding: 20px 0; /* Add padding for better spacing */
+    text-align: center; /* Center align the content */
+  }footer {
+    position: fixed; /* Change to 'fixed' to position it at the bottom of the viewport */
+    bottom: 0; /* Position the footer at the bottom of the viewport */
+    width: 100%; /* Set the width to fill the entire viewport */
+    height: 26vh; /* You may adjust the height as needed */
+    background-color: white; /* Add background color */
+    border-top: 1px solid #ddd; /* Add a border at the top of the footer for separation */
+    padding: 20px 1000; /* Add padding for better spacing */
+    text-align: center; /* Center align the content */
+  }
 }
 
 .project-title {
@@ -382,6 +401,19 @@ article .icon {
 .project-btn {
   color: black;
   border-color: rgb(163, 163, 163);
+}
+
+.project-description {
+  margin-top: 1rem;
+  padding: 0 1rem; /* Add padding for spacing */
+  color: rgb(85, 85, 85);
+}
+
+.details-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 /* CONTACT */
