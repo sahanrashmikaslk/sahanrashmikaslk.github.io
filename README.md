@@ -69,6 +69,7 @@ docker run -p 8080:80 portfolio:latest
 ## 📧 Contact
 
 **Sahan Lelwala**
+
 - Email: sahanrashmikaslk@gmail.com
 - LinkedIn: [sahan-lelwala](https://linkedin.com/in/sahan-lelwala/)
 - GitHub: [sahanrashmikaslk](https://github.com/sahanrashmikaslk/)
