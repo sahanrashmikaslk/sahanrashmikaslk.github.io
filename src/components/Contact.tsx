@@ -28,14 +28,14 @@ const Contact: React.FC = () => {
               <div className="space-y-6">
                 {/* Email */}
                 <div className="flex items-center space-x-4 group">
-                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-200">
-                    <img src="/assets/email.png" alt="Email" className="w-6 h-6 brightness-0 invert" />
+                  <div className="w-12 h-12 bg-gray-900 dark:bg-white rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-200">
+                    <img src="/assets/email.png" alt="Email" className="w-6 h-6 brightness-0 invert dark:brightness-100 dark:invert-0" />
                   </div>
                   <div>
                     <h4 className="font-medium text-gray-900 dark:text-white">Email</h4>
                     <a 
                       href={`mailto:${email}`}
-                      className="text-blue-600 dark:text-blue-400 hover:underline"
+                      className="text-gray-900 dark:text-white hover:text-gray-600 dark:hover:text-gray-300 hover:underline"
                     >
                       {email}
                     </a>
@@ -44,8 +44,8 @@ const Contact: React.FC = () => {
 
                 {/* LinkedIn */}
                 <div className="flex items-center space-x-4 group">
-                  <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-blue-700 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-200">
-                    <img src="/assets/linkedin.png" alt="LinkedIn" className="w-6 h-6 brightness-0 invert" />
+                  <div className="w-12 h-12 bg-gray-900 dark:bg-white rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-200">
+                    <img src="/assets/linkedin.png" alt="LinkedIn" className="w-6 h-6 brightness-0 invert dark:brightness-100 dark:invert-0" />
                   </div>
                   <div>
                     <h4 className="font-medium text-gray-900 dark:text-white">LinkedIn</h4>
@@ -53,7 +53,7 @@ const Contact: React.FC = () => {
                       href={social.linkedin}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-blue-600 dark:text-blue-400 hover:underline"
+                      className="text-gray-900 dark:text-white hover:text-gray-600 dark:hover:text-gray-300 hover:underline"
                     >
                       Sahan Lelwala
                     </a>
@@ -62,8 +62,8 @@ const Contact: React.FC = () => {
 
                 {/* GitHub */}
                 <div className="flex items-center space-x-4 group">
-                  <div className="w-12 h-12 bg-gradient-to-r from-gray-700 to-gray-900 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-200">
-                    <img src="/assets/github.png" alt="GitHub" className="w-6 h-6 brightness-0 invert" />
+                  <div className="w-12 h-12 bg-gray-900 dark:bg-white rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-200">
+                    <img src="/assets/github.png" alt="GitHub" className="w-6 h-6 brightness-0 invert dark:brightness-100 dark:invert-0" />
                   </div>
                   <div>
                     <h4 className="font-medium text-gray-900 dark:text-white">GitHub</h4>
@@ -71,7 +71,7 @@ const Contact: React.FC = () => {
                       href={social.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-blue-600 dark:text-blue-400 hover:underline"
+                      className="text-gray-900 dark:text-white hover:text-gray-600 dark:hover:text-gray-300 hover:underline"
                     >
                       sahanrashmikaslk
                     </a>
@@ -89,33 +89,33 @@ const Contact: React.FC = () => {
                     href={social.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center hover:bg-blue-700 hover:scale-110 transition-all duration-200"
+                    className="w-10 h-10 bg-gray-900 dark:bg-white rounded-lg flex items-center justify-center hover:bg-gray-700 dark:hover:bg-gray-200 hover:scale-110 transition-all duration-200"
                   >
-                    <img src="/assets/linkedin.png" alt="LinkedIn" className="w-5 h-5 brightness-0 invert" />
+                    <img src="/assets/linkedin.png" alt="LinkedIn" className="w-5 h-5 brightness-0 invert dark:brightness-100 dark:invert-0" />
                   </a>
                   <a
                     href={social.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-10 h-10 bg-gray-700 rounded-lg flex items-center justify-center hover:bg-gray-800 hover:scale-110 transition-all duration-200"
+                    className="w-10 h-10 bg-gray-900 dark:bg-white rounded-lg flex items-center justify-center hover:bg-gray-700 dark:hover:bg-gray-200 hover:scale-110 transition-all duration-200"
                   >
-                    <img src="/assets/github.png" alt="GitHub" className="w-5 h-5 brightness-0 invert" />
+                    <img src="/assets/github.png" alt="GitHub" className="w-5 h-5 brightness-0 invert dark:brightness-100 dark:invert-0" />
                   </a>
                   <a
                     href={social.facebook}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-10 h-10 bg-blue-500 rounded-lg flex items-center justify-center hover:bg-blue-600 hover:scale-110 transition-all duration-200"
+                    className="w-10 h-10 bg-gray-900 dark:bg-white rounded-lg flex items-center justify-center hover:bg-gray-700 dark:hover:bg-gray-200 hover:scale-110 transition-all duration-200"
                   >
-                    <img src="/assets/fb.png" alt="Facebook" className="w-5 h-5 brightness-0 invert" />
+                    <img src="/assets/fb.png" alt="Facebook" className="w-5 h-5 brightness-0 invert dark:brightness-100 dark:invert-0" />
                   </a>
                   <a
                     href={social.instagram}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-10 h-10 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center hover:from-purple-600 hover:to-pink-600 hover:scale-110 transition-all duration-200"
+                    className="w-10 h-10 bg-gray-900 dark:bg-white rounded-lg flex items-center justify-center hover:bg-gray-700 dark:hover:bg-gray-200 hover:scale-110 transition-all duration-200"
                   >
-                    <img src="/assets/instagram.png" alt="Instagram" className="w-5 h-5 brightness-0 invert" />
+                    <img src="/assets/instagram.png" alt="Instagram" className="w-5 h-5 brightness-0 invert dark:brightness-100 dark:invert-0" />
                   </a>
                 </div>
               </div>
@@ -134,7 +134,7 @@ const Contact: React.FC = () => {
                   </label>
                   <input
                     type="text"
-                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white transition-colors duration-200"
+                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-gray-500 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white transition-colors duration-200"
                     placeholder="Your Name"
                   />
                 </div>
@@ -145,7 +145,7 @@ const Contact: React.FC = () => {
                   </label>
                   <input
                     type="email"
-                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white transition-colors duration-200"
+                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-gray-500 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white transition-colors duration-200"
                     placeholder="your.email@example.com"
                   />
                 </div>
@@ -156,7 +156,7 @@ const Contact: React.FC = () => {
                   </label>
                   <input
                     type="text"
-                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white transition-colors duration-200"
+                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-gray-500 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white transition-colors duration-200"
                     placeholder="Project Collaboration"
                   />
                 </div>
@@ -167,7 +167,7 @@ const Contact: React.FC = () => {
                   </label>
                   <textarea
                     rows={5}
-                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white transition-colors duration-200 resize-none"
+                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-gray-500 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white transition-colors duration-200 resize-none"
                     placeholder="Tell me about your project or collaboration idea..."
                   ></textarea>
                 </div>

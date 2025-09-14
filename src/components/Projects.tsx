@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { portfolioData } from '../data/portfolio';
 
 const Projects: React.FC = () => {
@@ -112,9 +113,9 @@ const Projects: React.FC = () => {
             <p className="text-gray-600 dark:text-gray-300 mb-6">
               Explore additional projects and contributions on my GitHub profile.
             </p>
-            <button className="btn-primary w-full">
+            <Link to="/projects" className="btn-primary w-full">
               View All Projects
-            </button>
+            </Link>
           </div>
         </div>
       </div>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { portfolioData } from '../data/portfolio';
 
 const About: React.FC = () => {
@@ -32,8 +33,8 @@ const About: React.FC = () => {
             <div className="grid md:grid-cols-2 gap-8 mb-8">
               {/* Achievements Card */}
               <div className="card p-6 text-center">
-                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <img src="/assets/experience.png" alt="Achievements" className="w-6 h-6 brightness-0 invert" />
+                <div className="w-12 h-12 bg-gray-900 dark:bg-white rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <img src="/assets/experience.png" alt="Achievements" className="w-6 h-6 brightness-0 invert dark:brightness-100 dark:invert-0" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
                   Achievements
@@ -47,16 +48,16 @@ const About: React.FC = () => {
                       <p className="text-xs">{achievement.description}</p>
                     </div>
                   ))}
-                  <button className="text-blue-600 dark:text-blue-400 hover:underline text-sm mt-2">
+                  <Link to="/achievements" className="text-gray-900 dark:text-white hover:text-gray-600 dark:hover:text-gray-300 text-sm mt-2 inline-block hover:underline">
                     Read More...
-                  </button>
+                  </Link>
                 </div>
               </div>
 
               {/* Education Card */}
               <div className="card p-6 text-center">
-                <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <img src="/assets/education.png" alt="Education" className="w-6 h-6 brightness-0 invert" />
+                <div className="w-12 h-12 bg-gray-900 dark:bg-white rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <img src="/assets/education.png" alt="Education" className="w-6 h-6 brightness-0 invert dark:brightness-100 dark:invert-0" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
                   Education

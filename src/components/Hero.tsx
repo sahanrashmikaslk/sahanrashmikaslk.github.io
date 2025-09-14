@@ -16,7 +16,7 @@ const Hero: React.FC = () => {
   };
 
   return (
-    <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 to-white dark:from-gray-900 dark:to-gray-800 pt-16">
+    <section className="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-gray-800 pt-16">
       <div className="container-max section-padding">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Text Content */}
@@ -65,11 +65,11 @@ const Hero: React.FC = () => {
                 className="group"
                 aria-label="LinkedIn"
               >
-                <div className="w-12 h-12 bg-gray-100 dark:bg-gray-800 rounded-full flex items-center justify-center group-hover:bg-blue-600 group-hover:scale-110 transition-all duration-300">
+                <div className="w-12 h-12 bg-gray-100 dark:bg-gray-800 rounded-full flex items-center justify-center group-hover:bg-gray-900 dark:group-hover:bg-white group-hover:scale-110 transition-all duration-300">
                   <img 
                     src="/assets/linkedin.png" 
                     alt="LinkedIn" 
-                    className="w-6 h-6 group-hover:brightness-0 group-hover:invert transition-all duration-300"
+                    className="w-6 h-6 group-hover:brightness-0 group-hover:invert dark:group-hover:brightness-100 dark:group-hover:invert-0 transition-all duration-300"
                   />
                 </div>
               </a>
@@ -80,11 +80,11 @@ const Hero: React.FC = () => {
                 className="group"
                 aria-label="GitHub"
               >
-                <div className="w-12 h-12 bg-gray-100 dark:bg-gray-800 rounded-full flex items-center justify-center group-hover:bg-gray-700 group-hover:scale-110 transition-all duration-300">
+                <div className="w-12 h-12 bg-gray-100 dark:bg-gray-800 rounded-full flex items-center justify-center group-hover:bg-gray-900 dark:group-hover:bg-white group-hover:scale-110 transition-all duration-300">
                   <img 
                     src="/assets/github.png" 
                     alt="GitHub" 
-                    className="w-6 h-6 group-hover:brightness-0 group-hover:invert transition-all duration-300"
+                    className="w-6 h-6 group-hover:brightness-0 group-hover:invert dark:group-hover:brightness-100 dark:group-hover:invert-0 transition-all duration-300"
                   />
                 </div>
               </a>
@@ -95,11 +95,11 @@ const Hero: React.FC = () => {
                 className="group"
                 aria-label="Facebook"
               >
-                <div className="w-12 h-12 bg-gray-100 dark:bg-gray-800 rounded-full flex items-center justify-center group-hover:bg-blue-500 group-hover:scale-110 transition-all duration-300">
+                <div className="w-12 h-12 bg-gray-100 dark:bg-gray-800 rounded-full flex items-center justify-center group-hover:bg-gray-900 dark:group-hover:bg-white group-hover:scale-110 transition-all duration-300">
                   <img 
                     src="/assets/fb.png" 
                     alt="Facebook" 
-                    className="w-6 h-6 group-hover:brightness-0 group-hover:invert transition-all duration-300"
+                    className="w-6 h-6 group-hover:brightness-0 group-hover:invert dark:group-hover:brightness-100 dark:group-hover:invert-0 transition-all duration-300"
                   />
                 </div>
               </a>
@@ -110,11 +110,11 @@ const Hero: React.FC = () => {
                 className="group"
                 aria-label="Instagram"
               >
-                <div className="w-12 h-12 bg-gray-100 dark:bg-gray-800 rounded-full flex items-center justify-center group-hover:bg-gradient-to-r group-hover:from-purple-500 group-hover:to-pink-500 group-hover:scale-110 transition-all duration-300">
+                <div className="w-12 h-12 bg-gray-100 dark:bg-gray-800 rounded-full flex items-center justify-center group-hover:bg-gray-900 dark:group-hover:bg-white group-hover:scale-110 transition-all duration-300">
                   <img 
                     src="/assets/instagram.png" 
                     alt="Instagram" 
-                    className="w-6 h-6 group-hover:brightness-0 group-hover:invert transition-all duration-300"
+                    className="w-6 h-6 group-hover:brightness-0 group-hover:invert dark:group-hover:brightness-100 dark:group-hover:invert-0 transition-all duration-300"
                   />
                 </div>
               </a>
@@ -132,8 +132,8 @@ const Hero: React.FC = () => {
                 />
               </div>
               {/* Floating elements */}
-              <div className="absolute -top-4 -right-4 w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full animate-pulse"></div>
-              <div className="absolute -bottom-6 -left-6 w-12 h-12 bg-gradient-to-r from-green-400 to-blue-500 rounded-full animate-pulse delay-1000"></div>
+              <div className="absolute -top-4 -right-4 w-16 h-16 bg-gray-300 dark:bg-gray-600 rounded-full animate-pulse"></div>
+              <div className="absolute -bottom-6 -left-6 w-12 h-12 bg-gray-400 dark:bg-gray-500 rounded-full animate-pulse delay-1000"></div>
             </div>
           </div>
         </div>
