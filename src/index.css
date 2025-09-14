@@ -11,64 +11,161 @@
   }
   
   body {
-    @apply bg-white text-gray-900 transition-colors duration-300;
-  }
-  
-  .dark body {
-    @apply bg-gray-900 text-white;
+    margin: 0;
+    font-family: 'Inter', system-ui, sans-serif;
   }
 }
 
 @layer components {
   .section-padding {
-    @apply px-4 sm:px-6 lg:px-8;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  @media (min-width: 640px) {
+    .section-padding {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .section-padding {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
   }
   
   .container-max {
-    @apply max-w-7xl mx-auto;
+    max-width: 80rem;
+    margin-left: auto;
+    margin-right: auto;
   }
   
   .btn-primary {
-    @apply inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-lg shadow-sm text-white bg-gray-900 hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 transition-all duration-200 transform hover:scale-105;
+    display: inline-flex;
+    align-items: center;
+    padding: 0.75rem 1.5rem;
+    border: 1px solid transparent;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    color: white;
+    background-color: rgb(17 24 39);
+    transition: all 0.2s;
+    transform: scale(1);
+  }
+  
+  .btn-primary:hover {
+    background-color: rgb(31 41 55);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    transform: scale(1.05);
+  }
+  
+  .btn-primary:focus {
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+    box-shadow: 0 0 0 2px rgb(17 24 39);
   }
   
   .btn-secondary {
-    @apply inline-flex items-center px-6 py-3 border border-gray-300 text-base font-medium rounded-lg text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 transition-all duration-200 transform hover:scale-105;
+    display: inline-flex;
+    align-items: center;
+    padding: 0.75rem 1.5rem;
+    border: 1px solid rgb(209 213 219);
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 0.5rem;
+    color: rgb(55 65 81);
+    background-color: white;
+    transition: all 0.2s;
+    transform: scale(1);
+  }
+  
+  .btn-secondary:hover {
+    background-color: rgb(249 250 251);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    transform: scale(1.05);
   }
   
   .dark .btn-secondary {
-    @apply border-gray-600 text-gray-300 bg-gray-800 hover:bg-gray-700;
+    border-color: rgb(75 85 99);
+    color: rgb(209 213 219);
+    background-color: rgb(31 41 55);
+  }
+  
+  .dark .btn-secondary:hover {
+    background-color: rgb(55 65 81);
   }
   
   .card {
-    @apply bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1;
+    background-color: white;
+    border-radius: 0.75rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s;
+    transform: translateY(0);
+  }
+  
+  .card:hover {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    transform: translateY(-0.25rem);
   }
   
   .dark .card {
-    @apply bg-gray-800;
+    background-color: rgb(31 41 55);
   }
   
   .nav-link {
-    @apply text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200;
+    color: rgb(75 85 99);
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.375rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+  
+  .nav-link:hover {
+    color: rgb(17 24 39);
   }
   
   .dark .nav-link {
-    @apply text-gray-300 hover:text-white;
+    color: rgb(209 213 219);
+  }
+  
+  .dark .nav-link:hover {
+    color: white;
   }
   
   .section-title {
-    @apply text-3xl md:text-4xl font-bold text-center mb-4 text-gray-900;
+    font-size: 2.25rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: rgb(17 24 39);
+  }
+  
+  @media (min-width: 768px) {
+    .section-title {
+      font-size: 3rem;
+    }
   }
   
   .dark .section-title {
-    @apply text-white;
+    color: white;
   }
   
   .section-subtitle {
-    @apply text-lg text-center text-gray-600 mb-12 max-w-2xl mx-auto;
+    font-size: 1.125rem;
+    text-align: center;
+    color: rgb(75 85 99);
+    margin-bottom: 3rem;
+    max-width: 42rem;
+    margin-left: auto;
+    margin-right: auto;
   }
   
   .dark .section-subtitle {
-    @apply text-gray-300;
+    color: rgb(209 213 219);
   }
 }
