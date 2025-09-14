@@ -32,6 +32,9 @@
             <li><a href="#gotoexperience">Experience</a></li>
             <li><a href="#gotoprojects">Projects</a></li>
             <li><a href="#gotocontact">Contact</a></li>
+            <li>
+              <button id="theme-toggle" class="btn btn-color-2 theme-btn" aria-label="Toggle dark mode" title="Toggle theme">Dark</button>
+            </li>
           </ul>
         </div>
       </nav>
@@ -44,10 +47,13 @@
             <span></span>
           </div>
           <div class="menu-links">
-            <li><a href="#gotoabout" onclick="toggleMenu()">About</a></li>
-            <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-            <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-            <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+            <ul>
+              <li><a href="#gotoabout" onclick="toggleMenu()">About</a></li>
+              <li><a href="#gotoexperience" onclick="toggleMenu()">Experience</a></li>
+              <li><a href="#gotoprojects" onclick="toggleMenu()">Projects</a></li>
+              <li><a href="#gotocontact" onclick="toggleMenu()">Contact</a></li>
+              <li><button id="theme-toggle-mobile" class="btn btn-color-2 theme-btn" onclick="toggleMenu()" aria-label="Toggle dark mode" title="Toggle theme">Dark</button></li>
+            </ul>
           </div>
         </div>
       </nav>
@@ -102,7 +108,7 @@
         </div>
       </div>
     </section>
-    <div id="gotoabout" style="height: 10vh">
+    <div id="gotoabout" class="anchor-spacer-10vh">
       <br />
     </div>
     <section id="about">
@@ -161,7 +167,7 @@
         </div>
       </div>
     </section>
-    <div id="gotoexperience" style="height: 10vh">
+    <div id="gotoexperience" class="anchor-spacer-10vh">
       <br />
     </div>
     <section id="experience">
@@ -385,7 +391,7 @@
         </div>
       </div>
     </section>
-    <div id="gotoprojects" style="height: 9vh">
+    <div id="gotoprojects" class="anchor-spacer-9vh">
       <br />
     </div>
     <section id="projects">
@@ -504,7 +510,7 @@
         </div>
       </div>
     </section>
-    <div id="gotocontact" style="height: 10vh">
+    <div id="gotocontact" class="anchor-spacer-10vh">
       <br />
     </div>
     <section id="contact">

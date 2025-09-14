@@ -2,6 +2,31 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 
+/* Theme tokens */
+:root {
+  --bg: #ffffff;
+  --bg-elev: #fafafa;
+  --text: #0a0a0a;
+  --muted: #555555;
+  --border: #d9d9d9;
+  --card: #ffffff;
+  --shadow: 0 4px 15px rgba(0,0,0,0.06);
+  --shadow-strong: 0 8px 25px rgba(0,0,0,0.12);
+  --link: #0a0a0a;
+}
+
+[data-theme="dark"] {
+  --bg: #0b0b0b;
+  --bg-elev: #121212;
+  --text: #f2f2f2;
+  --muted: #b3b3b3;
+  --border: #262626;
+  --card: #141414;
+  --shadow: 0 4px 15px rgba(0,0,0,0.4);
+  --shadow-strong: 0 12px 32px rgba(0,0,0,0.55);
+  --link: #ffffff;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -9,6 +34,8 @@
 
 body {
   font-family: "Poppins", sans-serif;
+  background: var(--bg);
+  color: var(--text);
 }
 
 html {
@@ -16,14 +43,14 @@ html {
 }
 
 p {
-  color: rgb(85, 85, 85);
+  color: var(--muted);
 }
 
 /* TRANSITION */
 
 a,
 .btn {
-  transition: all 0.4 ease;
+  transition: all 0.3s ease;
 }
 
 /* DESKTOP NAV */
@@ -37,6 +64,14 @@ nav {
   justify-content: space-around;
   align-items: center;
   height: 12vh;
+  position: sticky;
+  top: 0;
+  background: var(--bg);
+  background: color-mix(in srgb, var(--bg) 92%, transparent);
+  -webkit-backdrop-filter: saturate(120%) blur(8px);
+  backdrop-filter: saturate(120%) blur(8px);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  transition: box-shadow 0.3s ease, background 0.3s ease;
 }
 
 .nav-links {
@@ -46,16 +81,30 @@ nav {
 }
 
 a {
-  color: black;
+  color: var(--link);
   text-decoration: none;
   text-decoration-color: white;
+  position: relative;
+}
+
+a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -6px;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background: var(--link);
+  transition: width 0.25s ease;
 }
 
 a:hover {
-  color: grey;
-  text-decoration: underline;
-  text-underline-offset: 1rem;
-  text-decoration-color: rgb(181, 181, 180);
+  color: var(--link);
+}
+
+a:hover::after {
+  width: 60%;
 }
 
 .logo {
@@ -65,7 +114,7 @@ a:hover {
 
 .logo:hover {
   cursor: default;
-  color: grey;
+  color: var(--muted);
   text-decoration-color: rgb(181, 181, 181);
 }
 
@@ -92,19 +141,19 @@ a:hover {
 .hamburger-icon span {
   width: 100%;
   height: 2px;
-  background-color: black;
-  transition: all 0.5 ease-in-out;
+  background-color: var(--text);
+  transition: all 0.5s ease-in-out;
 }
 
 .menu-links {
   position: absolute;
   top: 100%;
   right: 0;
-  background-color: white;
+  background-color: var(--card);
   width: fit-content;
   max-height: 0;
   overflow: hidden;
-  transition: all 0.5 ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .menu-links a {
@@ -112,9 +161,9 @@ a:hover {
   padding: 10px;
   text-align: center;
   font-size: 1.5rem;
-  color: black;
+  color: var(--text);
   text-decoration: none;
-  transition: all 0.5 ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .menu-links li {
@@ -158,6 +207,10 @@ section {
   box-sizing: border-box;
   min-height: fit-content;
 }
+
+/* Anchor offset spacers (instead of inline style) */
+.anchor-spacer-10vh { height: 10vh; }
+.anchor-spacer-9vh { height: 9vh; }
 
 .section-container {
   display: flex;
@@ -215,6 +268,11 @@ section {
 .icon {
   cursor: pointer;
   height: 2rem;
+  transition: all 0.3s ease;
+}
+
+.icon:hover {
+  transform: translateY(-2px);
 }
 
 /* BUTTONS */
@@ -235,7 +293,7 @@ section {
 
 .btn-color-1,
 .btn-color-2 {
-  border: rgb(53, 53, 53) 0.1rem solid;
+  border: 0.1rem solid var(--text);
 }
 
 .btn-color-1:hover,
@@ -245,12 +303,14 @@ section {
 
 .btn-color-1,
 .btn-color-2:hover {
-  background: rgb(53, 53, 53);
-  color: white;
+  background: var(--text);
+  color: var(--bg);
 }
 
 .btn-color-1:hover {
-  background: rgb(0, 0, 0);
+  background: var(--text);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(-1px);
 }
 
 .btn-color-2 {
@@ -258,7 +318,17 @@ section {
 }
 
 .btn-color-2:hover {
-  border: rgb(255, 255, 255) 0.1rem solid;
+  border-color: var(--text);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(-1px);
+}
+
+/* Compact theme toggle button variant */
+.theme-btn {
+  width: auto;
+  padding: 0.4rem 0.9rem;
+  font-size: 0.9rem;
+  line-height: 1;
 }
 
 .btn-container {
@@ -300,11 +370,17 @@ section {
 .details-container {
   padding: 1.5rem;
   flex: 1;
-  background: white;
+  background: var(--card);
   border-radius: 2rem;
-  border: rgb(53, 53, 53) 0.1rem solid;
-  border-color: rgb(163, 163, 163);
+  border: 0.1rem solid var(--border);
   text-align: center;
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+}
+
+.details-container:hover {
+  box-shadow: var(--shadow-strong);
+  transform: translateY(-2px);
 }
 
 .section-container {
@@ -325,7 +401,7 @@ section {
 }
 
 .experience-sub-title {
-  color: rgb(85, 85, 85);
+  color: var(--muted);
   font-weight: 600;
   font-size: 1.75rem;
   margin-bottom: 2rem;
@@ -364,49 +440,51 @@ article .icon {
 }
 
 .color-container {
-  border-color: rgb(163, 163, 163);
-  background: rgb(250, 250, 250);
+  border-color: var(--border);
+  background: var(--bg-elev);
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+}
+
+.color-container:hover {
+  box-shadow: var(--shadow-strong);
+  transform: translateY(-2px);
 }
 
 .project-img {
   border-radius: 2rem;
   width: 100%;
   height: auto;
-  footer {
-    position: fixed; /* Change to 'fixed' to position it at the bottom of the viewport */
-    bottom: 0; /* Position the footer at the bottom of the viewport */
-    width: 100%; /* Set the width to fill the entire viewport */
-    height: 26vh; /* You may adjust the height as needed */
-    background-color: white; /* Add background color */
-    border-top: 1px solid #ddd; /* Add a border at the top of the footer for separation */
-    padding: 20px 0; /* Add padding for better spacing */
-    text-align: center; /* Center align the content */
-  }footer {
-    position: fixed; /* Change to 'fixed' to position it at the bottom of the viewport */
-    bottom: 0; /* Position the footer at the bottom of the viewport */
-    width: 100%; /* Set the width to fill the entire viewport */
-    height: 26vh; /* You may adjust the height as needed */
-    background-color: white; /* Add background color */
-    border-top: 1px solid #ddd; /* Add a border at the top of the footer for separation */
-    padding: 20px 1000; /* Add padding for better spacing */
-    text-align: center; /* Center align the content */
+}
+
+/* Slightly round all images consistently without changing layout */
+img {
+  border-radius: 8px;
+}
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
   }
 }
 
 .project-title {
   margin: 1rem;
-  color: black;
+  color: var(--text);
 }
 
 .project-btn {
-  color: black;
-  border-color: rgb(163, 163, 163);
+  color: var(--text);
+  border-color: var(--border);
 }
 
 .project-description {
   margin-top: 1rem;
   padding: 0 1rem; /* Add padding for spacing */
-  color: rgb(85, 85, 85);
+  color: var(--muted);
 }
 
 .details-container {
@@ -429,11 +507,17 @@ article .icon {
   display: flex;
   justify-content: center;
   border-radius: 2rem;
-  border: rgb(53, 53, 53) 0.1rem solid;
-  border-color: rgb(163, 163, 163);
-  background: (250, 250, 250);
+  border: 0.1rem solid var(--border);
+  background: var(--bg-elev);
   margin: 2rem auto;
   padding: 0.5rem;
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+}
+
+.contact-info-upper-container:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
 }
 
 .contact-info-container {
@@ -471,5 +555,5 @@ footer p {
     position: fixed;
     width:100%;
     z-index: 100;
-    background-color:#ffff; opacity: 0.8; filter: alpha(opacity=50);
+  background-color: transparent;
 }
