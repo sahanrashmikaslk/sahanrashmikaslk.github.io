@@ -2,9 +2,9 @@ name: CI/CD Pipeline
 
 on:
   push:
-    branches: [modern-ui, main]
+    branches: [main]
   pull_request:
-    branches: [modern-ui, main]
+    branches: [main]
 
 env:
   REGISTRY: ghcr.io
@@ -42,7 +42,7 @@ jobs:
   build-and-push-docker:
     needs: test
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/modern-ui' || github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/main'
 
     permissions:
       contents: read
@@ -87,7 +87,7 @@ jobs:
   deploy-gh-pages:
     needs: test
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/modern-ui'
+    if: github.ref == 'refs/heads/main'
 
     permissions:
       contents: read
