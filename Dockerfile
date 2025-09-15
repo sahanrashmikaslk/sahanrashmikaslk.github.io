@@ -28,10 +28,6 @@ COPY nginx.conf /etc/nginx/nginx.conf
 # Copy built application from builder stage
 COPY --from=builder /app/dist /usr/share/nginx/html
 
-# Make sure assets directory exists and copy assets
-RUN mkdir -p /usr/share/nginx/html/assets
-COPY assets/ /usr/share/nginx/html/assets/
-
 # Expose port 80
 EXPOSE 80
 
