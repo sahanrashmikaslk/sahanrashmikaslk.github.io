@@ -111,7 +111,7 @@ export const portfolioData: PortfolioData = {
       id: "gene-expression-hpc",
       title: "Gene Expression Data - Correlation Matrix Computing Using OpenMP & CUDA",
       description: "A high-performance computing project implementing Pearson Correlation Matrix computation for large gene expression datasets using hybrid parallelization approaches. Developed 4 different implementations: Serial baseline, OpenMP multi-core CPU parallelization, CUDA GPU acceleration, and Hybrid OpenMP-CUDA approach. Achieved significant performance improvements: OpenMP (2.16x speedup), CUDA (6.06x speedup) on NVIDIA GeForce MX230. Includes comprehensive benchmarking system, accuracy verification, and performance analysis tools with automated testing scripts.",
-      image: "/assets/architecture.png", 
+      image: "/assets/Architecture.png", 
       github: "https://github.com/sahanrashmikaslk/GeneExpressionData-CorrelationMatrixComputing-UsingOpenMP-CUDA",
       technologies: ["CUDA", "OpenMP", "C", "Parallel Computing", "HPC", "GPU Programming"],
       featured: true,
