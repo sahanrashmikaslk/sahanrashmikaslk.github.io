@@ -91,7 +91,7 @@ const Contact: React.FC = () => {
                     rel="noopener noreferrer"
                     className="w-10 h-10 bg-gray-900 dark:bg-white rounded-lg flex items-center justify-center hover:bg-gray-700 dark:hover:bg-gray-200 hover:scale-110 transition-all duration-200"
                   >
-                    <img src="/assets/linkedin.png" alt="LinkedIn" className="w-5 h-5 brightness-0 invert dark:brightness-100 dark:invert-0" />
+                    <img src="/assets/linkedin.png" alt="LinkedIn" className="w-5 h-5 filter brightness-0 invert dark:brightness-100 dark:invert-0" />
                   </a>
                   <a
                     href={social.github}
@@ -99,7 +99,7 @@ const Contact: React.FC = () => {
                     rel="noopener noreferrer"
                     className="w-10 h-10 bg-gray-900 dark:bg-white rounded-lg flex items-center justify-center hover:bg-gray-700 dark:hover:bg-gray-200 hover:scale-110 transition-all duration-200"
                   >
-                    <img src="/assets/github.png" alt="GitHub" className="w-5 h-5 brightness-0 invert dark:brightness-100 dark:invert-0" />
+                    <img src="/assets/github.png" alt="GitHub" className="w-5 h-5 filter brightness-0 invert dark:brightness-100 dark:invert-0" />
                   </a>
                   <a
                     href={social.facebook}
@@ -107,7 +107,7 @@ const Contact: React.FC = () => {
                     rel="noopener noreferrer"
                     className="w-10 h-10 bg-gray-900 dark:bg-white rounded-lg flex items-center justify-center hover:bg-gray-700 dark:hover:bg-gray-200 hover:scale-110 transition-all duration-200"
                   >
-                    <img src="/assets/fb.png" alt="Facebook" className="w-5 h-5 brightness-0 invert dark:brightness-100 dark:invert-0" />
+                    <img src="/assets/fb.png" alt="Facebook" className="w-5 h-5 filter brightness-0 invert dark:brightness-100 dark:invert-0" />
                   </a>
                   <a
                     href={social.instagram}
@@ -115,7 +115,7 @@ const Contact: React.FC = () => {
                     rel="noopener noreferrer"
                     className="w-10 h-10 bg-gray-900 dark:bg-white rounded-lg flex items-center justify-center hover:bg-gray-700 dark:hover:bg-gray-200 hover:scale-110 transition-all duration-200"
                   >
-                    <img src="/assets/instagram.png" alt="Instagram" className="w-5 h-5 brightness-0 invert dark:brightness-100 dark:invert-0" />
+                    <img src="/assets/instagram.png" alt="Instagram" className="w-5 h-5 filter brightness-0 invert dark:brightness-100 dark:invert-0" />
                   </a>
                 </div>
               </div>

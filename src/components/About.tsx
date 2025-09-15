@@ -4,6 +4,11 @@ import { portfolioData } from '../data/portfolio';
 
 const About: React.FC = () => {
   const { education, achievements } = portfolioData;
+  
+  // Get top 3 most recent achievements (prioritize 2024 achievements)
+  const topAchievements = achievements
+    .sort((a, b) => b.year - a.year) // Sort by year descending
+    .slice(0, 3); // Take only first 3
 
   return (
     <section id="about" className="py-20 bg-gray-50 dark:bg-gray-800">
@@ -32,25 +37,48 @@ const About: React.FC = () => {
           <div className="animate-slide-in-right">
             <div className="grid md:grid-cols-2 gap-8 mb-8">
               {/* Achievements Card */}
-              <div className="card p-6 text-center">
-                <div className="w-12 h-12 bg-gray-900 dark:bg-white rounded-lg flex items-center justify-center mx-auto mb-4">
+              <div className="card p-8 text-center">
+                <div className="w-12 h-12 bg-gray-900 dark:bg-white rounded-lg flex items-center justify-center mx-auto mb-6">
                   <img src="/assets/experience.png" alt="Achievements" className="w-6 h-6 brightness-0 invert dark:brightness-100 dark:invert-0" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
-                  Achievements
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-6">
+                  Top Achievements
                 </h3>
-                <div className="space-y-3 text-sm text-gray-600 dark:text-gray-300">
-                  {achievements.map((achievement, index) => (
-                    <div key={index}>
-                      <h4 className="font-medium text-gray-900 dark:text-white">
-                        {achievement.title}
-                      </h4>
-                      <p className="text-xs">{achievement.description}</p>
+                <div className="space-y-4 text-sm text-gray-600 dark:text-gray-300">
+                  {topAchievements.map((achievement, index) => (
+                    <div key={index} className="py-3 px-3 rounded-lg bg-gray-50 dark:bg-gray-800 border-l-4 border-gray-900 dark:border-white flex items-center space-x-3">
+                      {/* Achievement Image */}
+                      <div className="flex-shrink-0">
+                        <img 
+                          src={achievement.image} 
+                          alt={achievement.title}
+                          className="w-12 h-12 object-cover rounded-lg shadow-sm"
+                        />
+                      </div>
+                      {/* Achievement Text */}
+                      <div className="flex-1 min-w-0">
+                        <h4 className="font-medium text-gray-900 dark:text-white text-sm leading-tight mb-1">
+                          {achievement.title.split(' - ')[0]} {/* Show only the main title part */}
+                        </h4>
+                        <p className="text-xs text-gray-500 dark:text-gray-400">
+                          {/* Extract and show the achievement result */}
+                          {achievement.description.includes('Champions') ? '🏆 Champions' :
+                           achievement.description.includes('2nd Runners-up') ? '🥉 2nd Runners-up' :
+                           achievement.description.includes('7th place') ? '🏅 7th Place' :
+                           achievement.description.includes('6th place') ? '🏅 6th Place' :
+                           achievement.title.split(' - ')[1] || `${achievement.year}`}
+                        </p>
+                      </div>
                     </div>
                   ))}
-                  <Link to="/achievements" className="text-gray-900 dark:text-white hover:text-gray-600 dark:hover:text-gray-300 text-sm mt-2 inline-block hover:underline">
-                    Read More...
-                  </Link>
+                  <div className="pt-4">
+                    <Link to="/achievements" className="text-gray-900 dark:text-white hover:text-gray-600 dark:hover:text-gray-300 text-sm inline-flex items-center hover:underline font-medium transition-colors duration-200">
+                      View All Achievements 
+                      <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </Link>
+                  </div>
                 </div>
               </div>
 
@@ -76,13 +104,6 @@ const About: React.FC = () => {
                   ))}
                 </div>
               </div>
-            </div>
-
-            {/* Bio Text */}
-            <div className="bg-white dark:bg-gray-900 rounded-xl p-6 shadow-lg">
-              <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                {portfolioData.bio}
-              </p>
             </div>
           </div>
         </div>

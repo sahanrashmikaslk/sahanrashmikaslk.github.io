@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { portfolioData } from '../data/portfolio';
 import ImageModal from '../components/ImageModal';
@@ -18,6 +18,25 @@ const Projects: React.FC = () => {
     title: '',
     description: ''
   });
+
+  // Handle scrolling to specific project if hash is present
+  useEffect(() => {
+    const hash = window.location.hash;
+    if (hash) {
+      // Remove the # from the hash
+      const projectId = hash.substring(1);
+      const element = document.getElementById(projectId);
+      if (element) {
+        // Wait a bit for the page to fully render then scroll
+        setTimeout(() => {
+          element.scrollIntoView({ 
+            behavior: 'smooth', 
+            block: 'start' 
+          });
+        }, 100);
+      }
+    }
+  }, []);
 
   const openModal = (project: any) => {
     setModalState({
@@ -61,7 +80,7 @@ const Projects: React.FC = () => {
         <div className="container-max section-padding">
           <div className="grid lg:grid-cols-2 gap-8">
             {projects.map((project, index) => (
-              <div key={index} className="card overflow-hidden">
+              <div key={index} id={project.id} className="card overflow-hidden scroll-mt-20">
                 {/* Project Image */}
                 <div 
                   className="h-64 bg-gray-100 dark:bg-gray-700 relative overflow-hidden cursor-pointer"

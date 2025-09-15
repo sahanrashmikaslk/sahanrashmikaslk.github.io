@@ -1,8 +1,8 @@
-# Sahan Lelwala - Modern Portfolio
+# Sahan Lelwala - Portfolio
 
 A modern, responsive portfolio website built with React, TypeScript, and Tailwind CSS. Features a minimalistic black and white design with dark/light mode support.
 
-## 🚀 Features
+## Features
 
 - **Modern Design**: Clean, minimalistic interface with smooth animations
 - **Responsive**: Mobile-first design that works on all devices
@@ -12,7 +12,7 @@ A modern, responsive portfolio website built with React, TypeScript, and Tailwin
 - **CI/CD**: Automated testing, building, and deployment with GitHub Actions
 - **Type Safe**: Built with TypeScript for better development experience
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Frontend**: React 18, TypeScript, Tailwind CSS
 - **Build Tool**: Vite
@@ -21,7 +21,7 @@ A modern, responsive portfolio website built with React, TypeScript, and Tailwin
 - **Deployment**: GitHub Pages, Docker Registry
 - **Linting**: ESLint with TypeScript support
 
-## 📦 Quick Start
+## Quick Start
 
 ### Local Development
 
@@ -66,7 +66,7 @@ npm run docker:build
 docker run -p 8080:80 portfolio:latest
 ```
 
-## 📧 Contact
+## Contact
 
 **Sahan Lelwala**
 
@@ -76,4 +76,3 @@ docker run -p 8080:80 portfolio:latest
 
 ---
 
-Built with ❤️ by Sahan Lelwala

@@ -81,7 +81,10 @@ const Projects: React.FC = () => {
                     GitHub
                   </button>
                   <button
-                    onClick={() => {/* Navigate to project details */}}
+                    onClick={() => {
+                      // Navigate to specific project by scrolling to it on the projects page
+                      window.location.href = `/projects#${project.id}`;
+                    }}
                     className="flex-1 btn-primary text-sm py-2"
                   >
                     More Info
