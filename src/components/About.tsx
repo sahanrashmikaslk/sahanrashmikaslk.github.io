@@ -1,9 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { portfolioData } from '../data/portfolio';
 
 const About: React.FC = () => {
   const { education, achievements } = portfolioData;
+  const navigate = useNavigate();
   
   // Get top 3 most recent achievements (prioritize 2024 achievements)
   const topAchievements = achievements
@@ -11,7 +12,7 @@ const About: React.FC = () => {
     .slice(0, 3); // Take only first 3
 
   return (
-    <section id="about" className="py-20 bg-gray-50 dark:bg-gray-800">
+    <section id="about" className="py-20 bg-gray-50 dark:bg-black">
       <div className="container-max section-padding">
         <div className="text-center mb-16 animate-fade-in">
           <p className="text-lg text-gray-600 dark:text-gray-300 mb-4">
@@ -46,7 +47,7 @@ const About: React.FC = () => {
                 </h3>
                 <div className="space-y-4 text-sm text-gray-600 dark:text-gray-300">
                   {topAchievements.map((achievement, index) => (
-                    <div key={index} className="py-3 px-3 rounded-lg bg-gray-50 dark:bg-gray-800 border-l-4 border-gray-900 dark:border-white flex items-center space-x-3">
+                    <div key={index} className="py-3 px-3 rounded-lg bg-gray-50 dark:bg-gray-900 border-l-4 border-gray-900 dark:border-white flex items-center space-x-3">
                       {/* Achievement Image */}
                       <div className="flex-shrink-0">
                         <img 
@@ -72,12 +73,21 @@ const About: React.FC = () => {
                     </div>
                   ))}
                   <div className="pt-4">
-                    <Link to="/achievements" className="text-gray-900 dark:text-white hover:text-gray-600 dark:hover:text-gray-300 text-sm inline-flex items-center hover:underline font-medium transition-colors duration-200">
+                    <button 
+                      onClick={() => {
+                        navigate('/achievements');
+                        // Scroll to top after navigation
+                        setTimeout(() => {
+                          window.scrollTo({ top: 0, behavior: 'smooth' });
+                        }, 100);
+                      }}
+                      className="text-gray-900 dark:text-white hover:text-gray-600 dark:hover:text-gray-300 text-sm inline-flex items-center hover:underline font-medium transition-colors duration-200 bg-transparent border-none cursor-pointer"
+                    >
                       View All Achievements 
                       <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                       </svg>
-                    </Link>
+                    </button>
                   </div>
                 </div>
               </div>

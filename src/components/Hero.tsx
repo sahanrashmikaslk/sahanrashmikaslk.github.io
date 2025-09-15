@@ -16,7 +16,7 @@ const Hero: React.FC = () => {
   };
 
   return (
-    <section className="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-gray-800 pt-16">
+    <section className="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-black pt-16">
       <div className="container-max section-padding">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Text Content */}
@@ -65,7 +65,7 @@ const Hero: React.FC = () => {
                 className="group"
                 aria-label="LinkedIn"
               >
-                <div className="w-12 h-12 bg-gray-100 dark:bg-gray-800 rounded-full flex items-center justify-center group-hover:bg-gray-900 dark:group-hover:bg-white group-hover:scale-110 transition-all duration-300">
+                <div className="w-12 h-12 bg-gray-100 dark:bg-gray-900 rounded-full flex items-center justify-center group-hover:bg-gray-900 dark:group-hover:bg-white group-hover:scale-110 transition-all duration-300">
                   <img 
                     src="/assets/linkedin.png" 
                     alt="LinkedIn" 
@@ -80,7 +80,7 @@ const Hero: React.FC = () => {
                 className="group"
                 aria-label="GitHub"
               >
-                <div className="w-12 h-12 bg-gray-100 dark:bg-gray-800 rounded-full flex items-center justify-center group-hover:bg-gray-900 dark:group-hover:bg-white group-hover:scale-110 transition-all duration-300">
+                <div className="w-12 h-12 bg-gray-100 dark:bg-gray-900 rounded-full flex items-center justify-center group-hover:bg-gray-900 dark:group-hover:bg-white group-hover:scale-110 transition-all duration-300">
                   <img 
                     src="/assets/github.png" 
                     alt="GitHub" 
@@ -95,7 +95,7 @@ const Hero: React.FC = () => {
                 className="group"
                 aria-label="Facebook"
               >
-                <div className="w-12 h-12 bg-gray-100 dark:bg-gray-800 rounded-full flex items-center justify-center group-hover:bg-gray-900 dark:group-hover:bg-white group-hover:scale-110 transition-all duration-300">
+                <div className="w-12 h-12 bg-gray-100 dark:bg-gray-900 rounded-full flex items-center justify-center group-hover:bg-gray-900 dark:group-hover:bg-white group-hover:scale-110 transition-all duration-300">
                   <img 
                     src="/assets/fb.png" 
                     alt="Facebook" 
@@ -110,7 +110,7 @@ const Hero: React.FC = () => {
                 className="group"
                 aria-label="Instagram"
               >
-                <div className="w-12 h-12 bg-gray-100 dark:bg-gray-800 rounded-full flex items-center justify-center group-hover:bg-gray-900 dark:group-hover:bg-white group-hover:scale-110 transition-all duration-300">
+                <div className="w-12 h-12 bg-gray-100 dark:bg-gray-900 rounded-full flex items-center justify-center group-hover:bg-gray-900 dark:group-hover:bg-white group-hover:scale-110 transition-all duration-300">
                   <svg 
                     className="w-5 h-5 fill-gray-600 dark:fill-white group-hover:fill-white dark:group-hover:fill-gray-900 transition-all duration-300"
                     viewBox="0 0 24 24"

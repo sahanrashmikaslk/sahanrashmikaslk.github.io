@@ -12,9 +12,11 @@
     "test": "echo \"No tests specified\" && exit 0",
     "test:ci": "npm run test",
     "preview": "vite preview",
-    "docker:dev": "docker-compose up portfolio-dev",
-    "docker:prod": "docker-compose up portfolio-prod",
-    "docker:build": "docker build -t portfolio:latest ."
+    "docker:dev": "docker-compose up --build portfolio-dev",
+    "docker:prod": "docker-compose up --build portfolio-prod",
+    "docker:build": "docker build -t portfolio:latest .",
+    "docker:stop": "docker-compose down",
+    "docker:clean": "docker-compose down --volumes --remove-orphans"
   },
   "dependencies": {
     "@types/react-router-dom": "^5.3.3",

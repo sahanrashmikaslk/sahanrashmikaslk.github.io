@@ -5,7 +5,7 @@ const Experience: React.FC = () => {
   const { skills } = portfolioData;
 
   return (
-    <section id="experience" className="py-20 bg-white dark:bg-gray-900">
+    <section id="experience" className="py-20 bg-white dark:bg-black">
       <div className="container-max section-padding">
         <div className="text-center mb-16 animate-fade-in">
           <p className="text-lg text-gray-600 dark:text-gray-300 mb-4">

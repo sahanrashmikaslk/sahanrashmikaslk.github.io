@@ -1,12 +1,13 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { portfolioData } from '../data/portfolio';
 
 const Projects: React.FC = () => {
   const { projects } = portfolioData;
+  const navigate = useNavigate();
 
   return (
-    <section id="projects" className="py-20 bg-gray-50 dark:bg-gray-800">
+    <section id="projects" className="py-20 bg-gray-50 dark:bg-black">
       <div className="container-max section-padding">
         <div className="text-center mb-16 animate-fade-in">
           <p className="text-lg text-gray-600 dark:text-gray-300 mb-4">
@@ -82,8 +83,7 @@ const Projects: React.FC = () => {
                   </button>
                   <button
                     onClick={() => {
-                      // Navigate to specific project by scrolling to it on the projects page
-                      window.location.href = `/projects#${project.id}`;
+                      navigate('/projects');
                     }}
                     className="flex-1 btn-primary text-sm py-2"
                   >
@@ -93,32 +93,50 @@ const Projects: React.FC = () => {
               </div>
             </div>
           ))}
-        </div>
 
-        {/* More Projects Section */}
-        <div className="text-center">
-          <div className="card p-8 max-w-md mx-auto">
-            <div className="grid grid-cols-2 gap-4 mb-6">
-              <img
-                src="/assets/project-4.png"
-                alt="More projects"
-                className="w-full h-24 object-cover rounded-lg"
-              />
-              <img
-                src="/assets/project-9.jpg"
-                alt="More projects"
-                className="w-full h-24 object-cover rounded-lg"
-              />
+          {/* More Projects Card - Now part of the grid */}
+          <div className={`card overflow-hidden group animate-slide-up delay-${projects.length * 100}`}>
+            {/* Images Section */}
+            <div className="relative overflow-hidden h-48 bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-800 dark:to-gray-900">
+              <div className="grid grid-cols-2 gap-2 p-4 h-full">
+                <img
+                  src="/assets/project-4.png"
+                  alt="More projects"
+                  className="w-full h-full object-cover rounded-lg group-hover:scale-105 transition-transform duration-500"
+                />
+                <img
+                  src="/assets/project-9.jpg"
+                  alt="More projects"
+                  className="w-full h-full object-cover rounded-lg group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </div>
-            <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
-              More Projects
-            </h3>
-            <p className="text-gray-600 dark:text-gray-300 mb-6">
-              Explore additional projects and contributions on my GitHub profile.
-            </p>
-            <Link to="/projects" className="btn-primary w-full">
-              View All Projects
-            </Link>
+
+            {/* Content */}
+            <div className="p-6">
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
+                More Projects
+              </h3>
+              <p className="text-gray-600 dark:text-gray-300 text-sm mb-4">
+                Explore additional projects and contributions on my GitHub profile.
+              </p>
+              
+              
+
+              {/* Action Button */}
+              <button
+                onClick={() => {
+                  navigate('/projects');
+                  setTimeout(() => {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                  }, 100);
+                }}
+                className="w-full btn-primary text-sm py-2"
+              >
+                View All Projects
+              </button>
+            </div>
           </div>
         </div>
       </div>

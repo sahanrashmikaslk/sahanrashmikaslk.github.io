@@ -40,9 +40,7 @@ const Footer: React.FC = () => {
             <p className="text-gray-400 text-sm">
               Copyright © 2024 Sahan Lelwala. All Rights Reserved.
             </p>
-            <p className="text-gray-500 text-xs mt-2">
-              Built with React, TypeScript, and Tailwind CSS
-            </p>
+            
           </div>
         </div>
       </div>

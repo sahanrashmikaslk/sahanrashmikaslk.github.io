@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { portfolioData } from '../data/portfolio';
 import ImageModal from '../components/ImageModal';
@@ -19,6 +19,11 @@ const Achievements: React.FC = () => {
     description: ''
   });
 
+  // Scroll to top when component mounts
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
+
   const openModal = (achievement: any) => {
     setModalState({
       isOpen: true,
@@ -34,9 +39,9 @@ const Achievements: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white dark:bg-gray-900 pt-16">
+    <div className="min-h-screen bg-white dark:bg-black pt-16">
       {/* Header */}
-      <div className="bg-gray-50 dark:bg-gray-800 py-12">
+      <div className="bg-gray-50 dark:bg-gray-900 py-12">
         <div className="container-max section-padding">
           <div className="text-center">
             <Link

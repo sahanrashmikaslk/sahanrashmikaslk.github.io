@@ -21,6 +21,10 @@ const Projects: React.FC = () => {
 
   // Handle scrolling to specific project if hash is present
   useEffect(() => {
+    // Always scroll to top first
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    
+    // Then check for hash navigation
     const hash = window.location.hash;
     if (hash) {
       // Remove the # from the hash
@@ -33,7 +37,7 @@ const Projects: React.FC = () => {
             behavior: 'smooth', 
             block: 'start' 
           });
-        }, 100);
+        }, 300);
       }
     }
   }, []);
@@ -53,9 +57,9 @@ const Projects: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white dark:bg-gray-900 pt-16">
+    <div className="min-h-screen bg-white dark:bg-black pt-16">
       {/* Header */}
-      <div className="bg-gray-50 dark:bg-gray-800 py-12">
+      <div className="bg-gray-50 dark:bg-gray-900 py-12">
         <div className="container-max section-padding">
           <div className="text-center">
             <Link
@@ -148,7 +152,7 @@ const Projects: React.FC = () => {
                       {project.technologies.map((tech, techIndex) => (
                         <span
                           key={techIndex}
-                          className="px-3 py-1 bg-gray-50 dark:bg-gray-800 text-gray-700 dark:text-gray-300 text-sm rounded-full border border-gray-200 dark:border-gray-600"
+                          className="px-3 py-1 bg-gray-50 dark:bg-gray-900 text-gray-700 dark:text-gray-300 text-sm rounded-full border border-gray-200 dark:border-gray-600"
                         >
                           {tech}
                         </span>
