@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { portfolioData } from '../data/portfolio';
+import type { Project } from '../types/portfolio';
 import ImageModal from '../components/ImageModal';
 
 const Projects: React.FC = () => {
@@ -42,7 +43,7 @@ const Projects: React.FC = () => {
     }
   }, []);
 
-  const openModal = (project: any) => {
+  const openModal = (project: Project) => {
     setModalState({
       isOpen: true,
       imageSrc: project.image,

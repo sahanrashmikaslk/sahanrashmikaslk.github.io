@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { portfolioData } from '../data/portfolio';
+import type { Achievement } from '../types/portfolio';
 import ImageModal from '../components/ImageModal';
 
 const Achievements: React.FC = () => {
@@ -24,7 +25,7 @@ const Achievements: React.FC = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }, []);
 
-  const openModal = (achievement: any) => {
+  const openModal = (achievement: Achievement) => {
     setModalState({
       isOpen: true,
       imageSrc: achievement.image,
