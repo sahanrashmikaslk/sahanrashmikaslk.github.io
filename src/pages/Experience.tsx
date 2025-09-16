@@ -1,42 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { portfolioData } from '../data/portfolio';
-import type { WorkExperience } from '../types/portfolio';
-import ImageModal from '../components/ImageModal';
 
 const Experience: React.FC = () => {
   const { workExperience } = portfolioData;
-  const [modalState, setModalState] = useState<{
-    isOpen: boolean;
-    imageSrc: string;
-    imageAlt: string;
-    title: string;
-    description: string;
-  }>({
-    isOpen: false,
-    imageSrc: '',
-    imageAlt: '',
-    title: '',
-    description: ''
-  });
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }, []);
-
-  const openModal = (experience: WorkExperience) => {
-    setModalState({
-      isOpen: true,
-      imageSrc: experience.image,
-      imageAlt: `${experience.position} at ${experience.company}`,
-      title: `${experience.position} at ${experience.company}`,
-      description: experience.description
-    });
-  };
-
-  const closeModal = () => {
-    setModalState(prev => ({ ...prev, isOpen: false }));
-  };
 
   return (
     <div className="min-h-screen bg-white dark:bg-black pt-16">
@@ -165,37 +136,58 @@ const Experience: React.FC = () => {
                   </div>
                 </div>
 
-                {/* Right Column - Image */}
+                {/* Right Column - Images */}
                 <div>
-                  <div 
-                    className="h-96 bg-gray-100 dark:bg-gray-700 rounded-lg overflow-hidden cursor-pointer"
-                    onClick={() => openModal(experience)}
-                  >
-                    <img
-                      src={experience.image}
-                      alt={`Working at ${experience.company}`}
-                      className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
-                      onError={(e) => {
-                        e.currentTarget.style.display = 'none';
-                        const nextElement = e.currentTarget.nextElementSibling as HTMLElement;
-                        if (nextElement) {
-                          nextElement.style.display = 'flex';
-                        }
-                      }}
-                    />
-                    {/* Fallback icon */}
-                    <div className="w-full h-full flex items-center justify-center hidden">
-                      <svg className="w-16 h-16 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                      </svg>
-                    </div>
-
-                    {/* Click to view indicator */}
-                    <div className="absolute inset-0 bg-black/50 opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                      <div className="bg-white/90 text-gray-900 px-4 py-2 rounded-lg font-medium">
-                        Click to view full image
+                  <div className="space-y-4">
+                    {/* Main Image */}
+                    <div className="h-80 bg-gray-100 dark:bg-gray-700 rounded-lg overflow-hidden">
+                      <img
+                        src={experience.image}
+                        alt={`Working at ${experience.company}`}
+                        className="w-full h-full object-cover"
+                        onError={(e) => {
+                          e.currentTarget.style.display = 'none';
+                          const nextElement = e.currentTarget.nextElementSibling as HTMLElement;
+                          if (nextElement) {
+                            nextElement.style.display = 'flex';
+                          }
+                        }}
+                      />
+                      {/* Fallback icon */}
+                      <div className="w-full h-full flex items-center justify-center hidden">
+                        <svg className="w-16 h-16 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                        </svg>
                       </div>
                     </div>
+
+                    {/* Additional Images */}
+                    {experience.additionalImages && experience.additionalImages.length > 0 && (
+                      <div className="space-y-4">
+                        {experience.additionalImages.map((image, imgIndex) => (
+                          <div key={imgIndex} className="bg-gray-100 dark:bg-gray-700 rounded-lg overflow-hidden">
+                            <img
+                              src={image}
+                              alt={`${experience.company} experience ${imgIndex + 1}`}
+                              className="w-full h-auto object-contain"
+                              onError={(e) => {
+                                e.currentTarget.style.display = 'none';
+                                const nextElement = e.currentTarget.nextElementSibling as HTMLElement;
+                                if (nextElement) {
+                                  nextElement.style.display = 'flex';
+                                }
+                              }}
+                            />
+                            {/* Fallback icon */}
+                            <div className="w-full h-40 flex items-center justify-center hidden">
+                              <svg className="w-8 h-8 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                              </svg>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>
@@ -236,16 +228,6 @@ const Experience: React.FC = () => {
           </div>
         </div>
       </div>
-
-      {/* Image Modal */}
-      <ImageModal
-        isOpen={modalState.isOpen}
-        onClose={closeModal}
-        imageSrc={modalState.imageSrc}
-        imageAlt={modalState.imageAlt}
-        title={modalState.title}
-        description={modalState.description}
-      />
     </div>
   );
 };

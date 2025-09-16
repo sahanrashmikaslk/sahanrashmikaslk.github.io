@@ -35,6 +35,7 @@ export interface WorkExperience {
   keyHighlights: string[];
   technologies: string[];
   image: string;
+  additionalImages?: string[];
   companyLogo: string;
 }
 

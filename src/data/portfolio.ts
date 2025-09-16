@@ -4,7 +4,7 @@ export const portfolioData: PortfolioData = {
   name: "Sahan Lelwala",
   title: "Computer Engineer",
   email: "sahanrashmikaslk@gmail.com",
-  bio: "A driven 3rd year Computer Engineering undergrad at Faculty of Engineering, University of Ruhuna, SL, with a fervent passion for Embedded Software / Systems development, IOT & Robotics. Proficient in Git to AWS, and an array of programming languages, I specialize in Software & Hardware both. Furthermore, as an innovator, I actively engaged in IEEE activities, from organizing workshops to participating in technical events and committed to leveraging technology for positive change.",
+  bio: "A final year Computer Engineering student at University of Ruhuna with expertise in embedded systems, IoT monitoring, robotics, electronics, IC design, and full-stack development. During my Magicbit internship, I mastered Embedded firmware programming for solar energy monitoring systems with ThingsBoard IoT platform and edge computing. I excel in bridging hardware and software domains, from low-level FPGA programming to cloud microservices. Furthermore, as an innovator, I actively engaged in IEEE activities, from organizing workshops to participating in technical events and committed to leveraging technology for positive change.",
   
   social: {
     linkedin: "https://linkedin.com/in/sahan-lelwala/",
@@ -35,17 +35,22 @@ export const portfolioData: PortfolioData = {
       company: "Magicbit (Pvt) Ltd",
       period: "6 months",
       location: "Colombo, Sri Lanka",
-      briefDescription: "Industrial IoT Development Intern specializing in ThingsBoard platform development, real-time data visualization, and end-to-end IoT monitoring solutions for renewable energy and manufacturing sectors.",
-      description: "During my six-month industrial training as a Computer Engineering intern at Magicbit (Pvt) Ltd, I was fully integrated into the development team, contributing significantly to the design, implementation, and deployment of industrial IoT solutions for prominent clients in the renewable energy and manufacturing sectors. The experience provided a comprehensive, hands-on application of engineering principles in a professional environment. My core responsibilities centered on the end-to-end development of IoT monitoring and control systems using the ThingsBoard platform. I was entrusted with critical tasks across multiple high-impact projects, including the Windforce Kebithigollawa Solar Plant and the multi-plant MAS Thulhiriya Rooftop Solar projects.",
+      briefDescription: "Fully integrated into the development team, contributing to design, implementation, and deployment of industrial IoT solutions using ThingsBoard platform for solar energy and manufacturing sectors.",
+      description: "During my six-month industrial training as a Computer Engineering intern at Magicbit (Pvt) Ltd, I was fully integrated into the development team, contributing significantly to the design, implementation, and deployment of industrial IoT solutions. The experience provided a comprehensive application of engineering principles, spanning software development, IoT architecture, and embedded systems development. My core responsibilities centered on the end-to-end development of IoT monitoring and control systems using the ThingsBoard platform. I was entrusted with critical tasks across high-impact projects, including the Windforce Kebithigollawa Solar Plant and the multi-plant MAS Thulhiriya Rooftop Solar projects.",
       keyHighlights: [
-        "Advanced Dashboard & UI/UX Development: Designed and built sophisticated, real-time data visualization dashboards from the ground up, including dynamic SCADA Single Line Diagram (SLD) using custom HTML/SVG and hierarchical dashboard views",
-        "Complex Data Processing & Rule Chain Management: Developed complex rule chains for data processing using ThingsBoard Rule Engine, created script nodes to decode proprietary raw byte array data from Kaco inverters",
-        "Critical Problem-Solving & System Optimization: Developed 'activity_checker' rule chain for accurate offline device detection, fixed inverter status glitches in multi-tab browser sessions, implemented refined yield calculation methods",
-        "Device Control & API Integration: Implemented remote control functionalities for inverters using RPC commands and Shared Attributes, integrated OpenWeather API for weather data enrichment",
-        "Client Interaction & Professional Practice: Actively participated in client meetings, presented project progress, conducted on-site investigations at MAS Thulhiriya for network connectivity issues"
+        "Embedded Systems Development & Data Acquisition: Developed firmware logic and data processing scripts to interface directly with industrial hardware. Created solutions to read and interpret specific device registry addresses from inverters (Kaco and P341 devices), decoding raw, low-level data streams including consolidated byte arrays and multi-register bitwise flags, converting them into meaningful telemetry (voltage, current, power, alarm states) for monitoring dashboards.",
+        "Advanced Dashboard & UI/UX Development: Designed and built sophisticated, real-time data visualization dashboards including dynamic SCADA Single Line Diagram (SLD) using custom HTML/SVG, implementing hierarchical dashboard views for intuitive plant navigation, and developing custom widgets for enhanced user experience and operational efficiency.",
+        "Complex Data Processing & Rule Chain Management: Became proficient with the ThingsBoard Rule Engine, developing complex rule chains that processed raw decoded values from the embedded level. Implemented robust alarm systems with separate creation and clearing logic for enhanced reliability, and resolved timing issues with delay nodes for optimal system performance.",
+        "Critical Problem-Solving & System Optimization: Developed 'activity_checker' rule chain to accurately display offline device status; Fixed inverter status glitch in multi-tab browser sessions by migrating status logic from client-side to server-side rule chain; Implemented refined yield calculation method (Max-Min total generation) to resolve data accuracy discrepancies; Conducted on-site investigation at MAS Thulhiriya to diagnose and propose solutions for intermittent hardware connectivity issues.",
+        "Device Control & API Integration: Successfully implemented remote control functionalities for inverters, utilizing both RPC for start/stop commands and Shared Attributes for max power adjustment. Integrated OpenWeather API to enrich dashboards with external weather data, providing comprehensive environmental monitoring capabilities.",
+        "Client Interaction & Professional Development: Actively participated in client meetings, presented project progress, and gathered stakeholder feedback. Direct engagement enhanced professional communication and collaboration skills, while involvement in events like Techno 2024 expanded industry networking and technical presentation abilities."
       ],
-      technologies: ["ThingsBoard", "IoT", "SCADA", "HTML/SVG", "JavaScript", "Rule Engine", "RPC", "API Integration", "Solar Plant Monitoring", "Real-time Analytics"],
-      image: "/assets/magicbit_at_work.png",
+      technologies: ["ThingsBoard", "IoT Platform Development", "SCADA Systems", "Industrial IoT", "Embedded Systems", "Firmware Development", "Data Processing", "Dashboard Development", "HTML/SVG", "JavaScript", "Rule Engine", "Device Integration", "Solar Energy Systems", "Real-time Monitoring", "API Integration", "OpenWeather API", "RPC Communication", "Hardware Interfacing", "Inverter Systems", "Kaco Devices", "P341 Devices"],
+      image: "/assets/magicbit_at_work.jpg",
+      additionalImages: [
+        "/assets/magicbit_at_company.jpg",
+        "/assets/magicbit_techno.jpg"
+      ],
       companyLogo: "/assets/magicbit_logo.png"
     }
   ],
@@ -125,7 +130,12 @@ export const portfolioData: PortfolioData = {
     "AI Development": [
       { name: "Machine Learning", level: "Scikit-learn, NumPy, Pandas, Matplotlib, Seaborn" },
       { name: "Deep Learning", level: "TensorFlow, PyTorch, LSTM, Neural Networks" },
-      { name: "ANN & Music Generation", level: "TensorFlow, PyTorch, OpenCV, Music Pattern Recognition" }
+      { name: "ANN & LSTM", level: "TensorFlow, PyTorch, OpenCV, Music Pattern Recognition" },
+      { name: "Network Analysis", level: "Anomaly Detection, Real-time Monitoring, Risk Assessment" },
+      { name: "AI Frameworks", level: "LangChain, LangGraph, Pydantic, Statistical Analysis" },
+      { name: "AI Development", level: "AI/ML Model Integration, Data Analysis, Predictive Modeling" }
+      
+ 
     ],
     "Electronics & Robotics": [
       { name: "Embedded Systems", level: "MPLAB X, Atmel Studio" },
@@ -140,12 +150,23 @@ export const portfolioData: PortfolioData = {
 
   projects: [
     {
+      id: "ai-network-analysis",
+      title: "AINet - AI-Powered Network Anomaly Detection System",
+      description: "An intelligent enterprise-grade network monitoring and anomaly detection system that leverages AI to analyze network metrics and detect unusual patterns across infrastructure. Built with LangGraph and LangChain for sophisticated analysis workflows, featuring real-time monitoring, automated analysis, and actionable insights. The system includes distributed architecture with lightweight agents on Linux machines, centralized analysis server with FastAPI, AI-powered anomaly detection using statistical methods and machine learning, interactive dashboard with real-time alerts, and comprehensive risk assessment with automated recommendations. Supports scalable deployment handling hundreds of monitored machines with secure API key authentication.",
+      image: "/assets/AINet.png",
+      github: "https://github.com/sahanrashmikaslk/AI_Network_Analysis",
+      technologies: ["Python", "LangChain", "LangGraph", "FastAPI", "SQLAlchemy", "AI/ML", "Network Monitoring", "Anomaly Detection", "Real-time Analytics", "Distributed Systems"],
+      featured: true,
+      category: "AI/Network Analysis"
+    },
+
+    {
       id: "online-medicine-delivery",
       title: "Online Medicine Delivery System - Microservices Architecture",
       description: "A comprehensive enterprise-grade online medicine delivery platform built with modern microservices architecture, deployed on Google Cloud Platform (GCP). The system features 6 microservices orchestrated with Kubernetes (GKE), utilizing event-driven communication through RabbitMQ, Redis caching for high performance, and PostgreSQL for data persistence. Implements secure authentication with Google OAuth 2.0, automated CI/CD pipeline with GitHub Actions, load balancing, and horizontal auto-scaling. The architecture includes API Gateway for request routing, real-time order tracking, email notifications, and admin dashboard with comprehensive monitoring and health checks.",
       image: "/assets/home_view.png",
       github: "https://github.com/sahanrashmikaslk/online-medicine-delivery",
-      technologies: [ "Microservices", "Kubernetes",  "GKE", "Redis", "RabbitMQ", "Docker", "Load Balancing", "CI/CD","GCP", "Node.js", "React", "PostgreSQL"],
+      technologies: ["Microservices", "Kubernetes", "GCP", "GKE", "Docker", "Load Balancing", "CI/CD", "Node.js", "React", "PostgreSQL", "Redis", "RabbitMQ"],
       featured: true,
       category: "Cloud Architecture"
     },

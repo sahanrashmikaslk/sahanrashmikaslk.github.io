@@ -52,6 +52,20 @@ const Header: React.FC = () => {
     setIsMobileMenuOpen(false);
   };
 
+  const handleLogoClick = () => {
+    if (location.pathname === '/') {
+      // If already on home page, scroll to top
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      // Navigate to home page
+      navigate('/');
+      // Scroll to top after navigation
+      setTimeout(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }, 100);
+    }
+  };
+
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -65,7 +79,7 @@ const Header: React.FC = () => {
           {/* Logo */}
           <div 
             className="flex items-center space-x-3 cursor-pointer"
-            onClick={() => navigate('/')}
+            onClick={handleLogoClick}
           >
             <img
               src="/assets/logo.ico"
