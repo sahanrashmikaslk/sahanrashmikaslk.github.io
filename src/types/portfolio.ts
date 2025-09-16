@@ -1,12 +1,3 @@
-export interface Experience {
-  title: string;
-  company: string;
-  period: string;
-  description: string;
-  technologies: string[];
-  current: boolean;
-}
-
 export interface Achievement {
   title: string;
   description: string;
@@ -52,7 +43,6 @@ export interface PortfolioData {
   bio: string;
   social: SocialLinks;
   education: Education[];
-  experience: Experience[];
   achievements: Achievement[];
   skills: Record<string, Skill[]>;
   projects: Project[];

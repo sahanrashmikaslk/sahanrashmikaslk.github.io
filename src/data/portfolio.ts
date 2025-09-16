@@ -28,17 +28,6 @@ export const portfolioData: PortfolioData = {
     }
   ],
 
-  experience: [
-    {
-      title: "Cloud Solutions Developer",
-      company: "Personal Project - Online Medicine Delivery",
-      period: "2024 - Present",
-      description: "Architected and developed a comprehensive microservices-based online medicine delivery platform on Google Cloud Platform. Led the implementation of 6 independent services with event-driven architecture, achieving scalable deployment using Kubernetes with horizontal pod autoscaling. Implemented CI/CD pipeline with GitHub Actions for automated testing, building, and zero-downtime deployments. Designed secure authentication system with JWT and Google OAuth 2.0, integrated RabbitMQ for asynchronous messaging, and Redis for high-performance caching. Managed PostgreSQL databases with connection pooling and optimized performance through caching strategies.",
-      technologies: ["Node.js", "React", "PostgreSQL", "Redis", "RabbitMQ", "Docker", "Kubernetes", "GCP", "GKE", "CI/CD", "Microservices"],
-      current: true
-    }
-  ],
-
   achievements: [
     {
       title: "Eminence 4.0 (2024) - Inter-university Technical Competition",
@@ -95,21 +84,21 @@ export const portfolioData: PortfolioData = {
     "Web Development": [
       { name: "Web Technologies", level: "React.js, Angular.js, Node.js, Express.js, Spring Boot" },
       { name: "UI/UX Designing", level: "Figma, WPF, Flutter" },
-      { name: "Database Designing", level: "PostgreSQL, MySQL, MongoDB, Redis" }
+      { name: "Database Designing", level: "PostgreSQL, MySQL, MongoDB" }
+    ],
+    "Cloud & DevOps": [
+      { name: "Google Cloud Platform (GCP)", level: "Google Kubernetes Engine (GKE), Cloud Load Balancer, Container Registry" },
+      { name: "Containerization", level: "Docker, Kubernetes, Microservices Architecture" },
+      { name: "CI/CD Pipelines", level: "GitHub Actions, Automated Deployment, Rolling Updates" },
+      { name: "Message Brokers", level: "RabbitMQ, Event-Driven Architecture" },
+      { name: "Caching & Databases", level: "Redis, PostgreSQL, Connection Pooling" }
     ],
     "Tools & Frameworks": [
       { name: "Git, VS Code, Jira, GitHub, IntelliJ, Eclipse", level: "" },
       { name: "Linux OS", level: "Intermediate" },
       { name: "DevOps Engineering", level: "AWS, Azure, GCP" },
-      { name: "Networking", level: "Cisco Packet Tracer" },
+      { name: "Networking", level: "Load Balancing, API Gateway, CORS, Rate Limiting" },
       { name: "High Performance Computing", level: "OpenMP, CUDA, Parallel Programming" }
-    ],
-    "Cloud & DevOps": [
-      { name: "Google Cloud Platform", level: "GKE, Load Balancer, Container Registry" },
-      { name: "Containerization", level: "Docker, Kubernetes, Microservices" },
-      { name: "CI/CD", level: "GitHub Actions, Automated Testing, Deployment" },
-      { name: "Message Brokers", level: "RabbitMQ, Event-Driven Architecture" },
-      { name: "Caching & Performance", level: "Redis, Connection Pooling, Load Balancing" }
     ],
     "AI Development": [
       { name: "Machine Learning", level: "Scikit-learn, NumPy, Pandas, Matplotlib, Seaborn" },
@@ -128,12 +117,12 @@ export const portfolioData: PortfolioData = {
     {
       id: "online-medicine-delivery",
       title: "Online Medicine Delivery System - Microservices Architecture",
-      description: "A comprehensive enterprise-grade online medicine delivery platform built with modern microservices architecture deployed on Google Cloud Platform. Features 6 independent services including API Gateway, Authentication, Catalog, Order Management, Delivery Tracking, and Notification services. Implements event-driven communication using RabbitMQ for asynchronous processing, Redis for high-performance caching and session management, and PostgreSQL with connection pooling for data persistence. The system demonstrates enterprise patterns including JWT authentication, Google OAuth 2.0 integration, role-based access control, automated CI/CD pipeline with GitHub Actions, and Kubernetes orchestration on GKE with horizontal pod autoscaling, load balancing, and zero-downtime deployments.",
+      description: "A comprehensive enterprise-grade online medicine delivery platform built with modern microservices architecture, deployed on Google Cloud Platform (GCP). The system features 6 microservices orchestrated with Kubernetes (GKE), utilizing event-driven communication through RabbitMQ, Redis caching for high performance, and PostgreSQL for data persistence. Implements secure authentication with Google OAuth 2.0, automated CI/CD pipeline with GitHub Actions, load balancing, and horizontal auto-scaling. The architecture includes API Gateway for request routing, real-time order tracking, email notifications, and admin dashboard with comprehensive monitoring and health checks.",
       image: "/assets/home_view.png",
       github: "https://github.com/sahanrashmikaslk/online-medicine-delivery",
-      technologies: ["Node.js", "React", "PostgreSQL", "Redis", "RabbitMQ", "Docker", "Kubernetes", "GCP", "GKE", "Google Cloud Load Balancer", "CI/CD", "GitHub Actions", "JWT", "Google OAuth 2.0", "Microservices", "Event-Driven Architecture"],
+      technologies: ["Node.js", "React", "PostgreSQL", "Redis", "RabbitMQ", "Kubernetes", "GCP", "GKE", "Docker", "Google OAuth", "CI/CD", "Load Balancing", "Microservices"],
       featured: true,
-      category: "Cloud Architecture & DevOps"
+      category: "Cloud Architecture"
     },
     {
       id: "gene-expression-hpc",
