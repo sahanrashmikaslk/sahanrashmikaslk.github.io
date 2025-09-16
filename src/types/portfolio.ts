@@ -24,6 +24,20 @@ export interface Education {
   current: boolean;
 }
 
+export interface WorkExperience {
+  id: string;
+  position: string;
+  company: string;
+  period: string;
+  location: string;
+  description: string;
+  briefDescription: string;
+  keyHighlights: string[];
+  technologies: string[];
+  image: string;
+  companyLogo: string;
+}
+
 export interface Skill {
   name: string;
   level: string;
@@ -43,6 +57,7 @@ export interface PortfolioData {
   bio: string;
   social: SocialLinks;
   education: Education[];
+  workExperience: WorkExperience[];
   achievements: Achievement[];
   skills: Record<string, Skill[]>;
   projects: Project[];

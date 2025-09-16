@@ -8,6 +8,7 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import AchievementsPage from './pages/Achievements';
 import ProjectsPage from './pages/Projects';
+import ExperiencePage from './pages/Experience';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           } />
           <Route path="/achievements" element={<AchievementsPage />} />
           <Route path="/projects" element={<ProjectsPage />} />
+          <Route path="/experience" element={<ExperiencePage />} />
         </Routes>
         <Footer />
       </div>

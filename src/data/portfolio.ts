@@ -28,6 +28,28 @@ export const portfolioData: PortfolioData = {
     }
   ],
 
+  workExperience: [
+    {
+      id: "magicbit-intern",
+      position: "Computer Engineering Intern",
+      company: "Magicbit (Pvt) Ltd",
+      period: "6 months",
+      location: "Colombo, Sri Lanka",
+      briefDescription: "Industrial IoT Development Intern specializing in ThingsBoard platform development, real-time data visualization, and end-to-end IoT monitoring solutions for renewable energy and manufacturing sectors.",
+      description: "During my six-month industrial training as a Computer Engineering intern at Magicbit (Pvt) Ltd, I was fully integrated into the development team, contributing significantly to the design, implementation, and deployment of industrial IoT solutions for prominent clients in the renewable energy and manufacturing sectors. The experience provided a comprehensive, hands-on application of engineering principles in a professional environment. My core responsibilities centered on the end-to-end development of IoT monitoring and control systems using the ThingsBoard platform. I was entrusted with critical tasks across multiple high-impact projects, including the Windforce Kebithigollawa Solar Plant and the multi-plant MAS Thulhiriya Rooftop Solar projects.",
+      keyHighlights: [
+        "Advanced Dashboard & UI/UX Development: Designed and built sophisticated, real-time data visualization dashboards from the ground up, including dynamic SCADA Single Line Diagram (SLD) using custom HTML/SVG and hierarchical dashboard views",
+        "Complex Data Processing & Rule Chain Management: Developed complex rule chains for data processing using ThingsBoard Rule Engine, created script nodes to decode proprietary raw byte array data from Kaco inverters",
+        "Critical Problem-Solving & System Optimization: Developed 'activity_checker' rule chain for accurate offline device detection, fixed inverter status glitches in multi-tab browser sessions, implemented refined yield calculation methods",
+        "Device Control & API Integration: Implemented remote control functionalities for inverters using RPC commands and Shared Attributes, integrated OpenWeather API for weather data enrichment",
+        "Client Interaction & Professional Practice: Actively participated in client meetings, presented project progress, conducted on-site investigations at MAS Thulhiriya for network connectivity issues"
+      ],
+      technologies: ["ThingsBoard", "IoT", "SCADA", "HTML/SVG", "JavaScript", "Rule Engine", "RPC", "API Integration", "Solar Plant Monitoring", "Real-time Analytics"],
+      image: "/assets/magicbit_at_work.png",
+      companyLogo: "/assets/magicbit_logo.png"
+    }
+  ],
+
   achievements: [
     {
       title: "Eminence 4.0 (2024) - Inter-university Technical Competition",
@@ -109,7 +131,10 @@ export const portfolioData: PortfolioData = {
       { name: "Embedded Systems", level: "MPLAB X, Atmel Studio" },
       { name: "HDL", level: "VHDL, Verilog, Modelsim" },
       { name: "Microcontrollers", level: "Arduino, NodeMCU, Raspberry PI" },
-      { name: "IOT", level: "Strong understanding of IOT, Cloud environments" }
+      { name: "IOT", level: "Strong understanding of IOT, Cloud environments" },
+      { name: "ThingsBoard", level: "IoT Platform Development, Rule Chains, Data Processing" },
+      { name: "SCADA Systems", level: "Real-time Monitoring, Dashboard Development" },
+      { name: "Industrial IoT", level: "Solar Plant Monitoring, Device Management" }
     ]
   },
 
