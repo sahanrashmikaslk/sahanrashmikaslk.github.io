@@ -120,7 +120,7 @@ export const portfolioData: PortfolioData = {
       description: "A comprehensive enterprise-grade online medicine delivery platform built with modern microservices architecture, deployed on Google Cloud Platform (GCP). The system features 6 microservices orchestrated with Kubernetes (GKE), utilizing event-driven communication through RabbitMQ, Redis caching for high performance, and PostgreSQL for data persistence. Implements secure authentication with Google OAuth 2.0, automated CI/CD pipeline with GitHub Actions, load balancing, and horizontal auto-scaling. The architecture includes API Gateway for request routing, real-time order tracking, email notifications, and admin dashboard with comprehensive monitoring and health checks.",
       image: "/assets/home_view.png",
       github: "https://github.com/sahanrashmikaslk/online-medicine-delivery",
-      technologies: ["Node.js", "React", "PostgreSQL", "Redis", "RabbitMQ", "Kubernetes", "GCP", "GKE", "Docker", "Google OAuth", "CI/CD", "Load Balancing", "Microservices"],
+      technologies: [ "Microservices", "Kubernetes",  "GKE", "Redis", "RabbitMQ", "Docker", "Load Balancing", "CI/CD","GCP", "Node.js", "React", "PostgreSQL"],
       featured: true,
       category: "Cloud Architecture"
     },
