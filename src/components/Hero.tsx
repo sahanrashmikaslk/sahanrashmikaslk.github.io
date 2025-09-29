@@ -12,7 +12,7 @@ const Hero: React.FC = () => {
   };
 
   const downloadCV = () => {
-    window.open('/assets/resume-example.pdf', '_blank');
+    window.open('/assets/Sahan_Lelwala-Resume.pdf', '_blank');
   };
 
   return (

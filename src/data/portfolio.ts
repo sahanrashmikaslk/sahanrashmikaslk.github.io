@@ -52,6 +52,27 @@ export const portfolioData: PortfolioData = {
         "/assets/magicbit_techno.jpg"
       ],
       companyLogo: "/assets/magicbit_logo.png"
+    },
+    {
+      id: "ieee-volunteering",
+      position: "Volunteering & Leadership Experience",
+      company: "IEEE Student Branch, University of Ruhuna",
+      period: "2022 - Present",
+      location: "University of Ruhuna, Sri Lanka",
+      briefDescription: "Active IEEE student leader: Core organizer for major events like IoTrix 2025 and SparkLink 1.0. Led technical teams, managed logistics, and drove impactful student engagement in technology and leadership.",
+      description: "\nActive IEEE student leader: Core organizer for major events like IoTrix 2025 and SparkLink 1.0. Led technical teams, managed logistics, and drove impactful student engagement in technology and leadership.",
+      keyHighlights: [
+        "Technical Team Lead - IoTrix 2025 (IOT Design Competition): Leading the technical development of IoTrix 2025, the flagship Internet of Things (IoT) event hosted by the IEEE Communications Society at the University of Ruhuna. This initiative aims to foster innovation and hands-on learning in IoT among students and professionals. Spearheading the design and implementation of IoT systems for workshops and competitions, ensuring alignment with current industry standards. Managing a diverse team of engineers and students, coordinating efforts to deliver high-quality technical content and experiences. Collaborating closely with academic and industry partners to integrate real-world challenges and solutions into the event's curriculum. Driving the adoption of emerging technologies and methodologies to enhance the learning experience and event outcomes. Successfully organized a series of hands-on workshops, including sessions on IoT product development and PCB design, featuring industry experts like Eng. Lasitha Jananjaya. Facilitated a collaborative environment that encouraged participants to ideate, integrate, and innovate, leading to the development of prototype IoT solutions. Enhanced the technical capabilities of the IEEE ComSoc student chapter, positioning it as a leader in IoT education and innovation within Sri Lanka.",
+        "Logistics Team Lead - SparkLink 1.0 - 2023 (Electronic Design Competition): As the Logistic Lead for SparkLink 1.0, I oversaw all aspects of event coordination, including venue logistics, transportation, and supply management, ensuring seamless operations throughout. Additionally, my team and I efficiently managed delegated tasks through Zoom, optimizing communication and organization in the lead-up to the competition. On the day of the event, we expertly handled these responsibilities, ensuring everything ran smoothly and delegates were properly managed. Our meticulous planning and execution contributed to the success of SparkLink 1.0, leaving a lasting impact on its legacy.",
+      ],
+      technologies: ["Leadership", "Event Management", "Teamwork", "IoT", "Robotics", "Technical Event Organization"],
+      image: " ",
+      additionalImages: [
+        // "/assets/achievement-1.jpeg",
+        "/assets/sparklink_lead.jpeg",
+        "/assets/sparklink_oc.jpeg"
+      ],
+      companyLogo: "/assets/ieee-logo.png"
     }
   ],
 
@@ -138,13 +159,16 @@ export const portfolioData: PortfolioData = {
  
     ],
     "Electronics & Robotics": [
-      { name: "Embedded Systems", level: "MPLAB X, Atmel Studio" },
-      { name: "HDL", level: "VHDL, Verilog, Modelsim" },
-      { name: "Microcontrollers", level: "Arduino, NodeMCU, Raspberry PI" },
-      { name: "IOT", level: "Strong understanding of IOT, Cloud environments" },
-      { name: "ThingsBoard", level: "IoT Platform Development, Rule Chains, Data Processing" },
-      { name: "SCADA Systems", level: "Real-time Monitoring, Dashboard Development" },
-      { name: "Industrial IoT", level: "Solar Plant Monitoring, Device Management" }
+  { name: "Embedded Systems", level: "MPLAB X, Atmel Studio" },
+  { name: "HDL", level: "VHDL, Verilog, Modelsim" },
+  { name: "Microcontrollers", level: "Arduino, NodeMCU, Raspberry PI" },
+  { name: "IOT", level: "Strong understanding of IOT, Cloud environments" },
+  { name: "ThingsBoard", level: "IoT Platform Development, Rule Chains, Data Processing" },
+  { name: "SCADA Systems", level: "Real-time Monitoring, Dashboard Development" },
+  { name: "Industrial IoT", level: "Solar Plant Monitoring, Device Management" },
+  { name: "MATLAB/Simulink", level: "Modeling, Simulation, Control Systems" },
+  { name: "PLC Programming", level: "Ladder Logic, Industrial Automation" },
+  { name: "Industrial Automation", level: "Sensors, Actuators, Process Control" }
     ]
   },
 
