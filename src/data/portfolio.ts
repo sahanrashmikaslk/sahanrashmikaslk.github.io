@@ -68,7 +68,7 @@ export const portfolioData: PortfolioData = {
       technologies: ["Leadership", "Event Management", "Teamwork", "IoT", "Robotics", "Technical Event Organization"],
       image: " ",
       additionalImages: [
-        // "/assets/achievement-1.jpeg",
+        "/assets/iotrix-1.jpeg",
         "/assets/sparklink_lead.jpeg",
         "/assets/sparklink_oc.jpeg"
       ],
@@ -150,7 +150,10 @@ export const portfolioData: PortfolioData = {
     ],
     "AI Development": [
       { name: "Machine Learning", level: "Scikit-learn, NumPy, Pandas, Matplotlib, Seaborn" },
-      { name: "Deep Learning", level: "TensorFlow, PyTorch, LSTM, Neural Networks" },
+      { name: "Deep Learning", level: "TensorFlow, PyTorch, LSTM, Neural Networks, MobileNetV3" },
+      { name: "Multi-Task Learning", level: "Dual-Head Architecture, Joint Optimization, Quality Assessment" },
+      { name: "Computer Vision", level: "YOLOv8,  Object Detection, OCR, EasyOCR, OpenCV, Image Processing" },
+      { name: "Medical AI", level: "Healthcare Applications, Clinical Image Analysis, Diagnostic Systems" },
       { name: "ANN & LSTM", level: "TensorFlow, PyTorch, OpenCV, Music Pattern Recognition" },
       { name: "Network Analysis", level: "Anomaly Detection, Real-time Monitoring, Risk Assessment" },
       { name: "AI Frameworks", level: "LangChain, LangGraph, Pydantic, Statistical Analysis" },
@@ -173,6 +176,26 @@ export const portfolioData: PortfolioData = {
   },
 
   projects: [
+    {
+      id: "neonatal-jaundice-detection",
+      title: "Neonatal Jaundice Detection - Dual-Head Multi-Task Learning System",
+      description: "State-of-the-art dual-head multi-task learning system for detecting neonatal jaundice from infant images. Features a MobileNetV3-Small backbone with two specialized classification heads: jaundice detection (Normal/Jaundice binary classification) and image quality assessment. Trained on Kaggle dataset (~200 jaundice, ~560 normal cases) achieving exceptional performance: Accuracy 93.0%, Sensitivity 81.3%, Specificity 97.6%, ROC AUC 97.4%. The system simultaneously performs jaundice detection and learned quality assessment, providing transparent confidence scoring even under challenging lighting conditions. Includes comprehensive training pipeline with early stopping, threshold optimization, and ONNX export. Streamlit application features multi-input support (upload/webcam/live feed), quality-aware predictions, and real-time analysis. Developed as part of final-year research project 'Development of an Automated Condition Controlling and Monitoring System for an Infant Incubator'.",
+      image: "/assets/jaundice-detection architecture.jpg", 
+      github: "https://github.com/sahanrashmikaslk/Neonatal_jaundice_detection",
+      technologies: ["Python", "PyTorch", "MobileNetV3", "Multi-Task Learning", "Deep Learning", "Computer Vision", "Streamlit", "ONNX", "Medical AI"],
+      featured: true,
+      category: "Medical AI/Computer Vision"
+    },
+    {
+      id: "neonatal-incubator-display-reader",
+      title: "Neonatal Incubator Display Reader - YOLOv8 & OCR Pipeline",
+      description: "End-to-end pipeline to automatically detect and read neonatal incubator display regions using YOLOv8 object detection, followed by OCR (EasyOCR) to extract vital parameters like temperature, humidity, and oxygen levels. Dataset collected on-site at National Hospital Galle NICU (250+ live incubator display images) and manually labeled in Label Studio for YOLO training. Achieved high model performance: Precision 0.994, Recall 0.992, mAP@0.5: 0.993. Features include real-time validation with range checks, decimal correction, confidence filtering, and a Streamlit UI for live webcam monitoring, batch processing, and telemetry logging. Developed as part of final-year research project 'Development of an Automated Condition Controlling and Monitoring System for an Infant Incubator'.",
+      image: "/assets/lcd_ocr.png", 
+      github: "https://github.com/sahanrashmikaslk/Neonatal_incubator_displayReader",
+      technologies: ["Python", "YOLOv8", "EasyOCR", "Computer Vision", "Deep Learning", "Streamlit", "OpenCV", "PyTorch", "CUDA"],
+      featured: true,
+      category: "Computer Vision/Healthcare"
+    },
     {
       id: "ai-network-analysis",
       title: "AINet - AI-Powered Network Anomaly Detection System",
@@ -214,6 +237,7 @@ export const portfolioData: PortfolioData = {
       featured: true,
       category: "AI/Deep Learning"
     },
+    
      {
       id: "risc-processor-verilog",
       title: "32-Bit RISC Processor using Verilog",
