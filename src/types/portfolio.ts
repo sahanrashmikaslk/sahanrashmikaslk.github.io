@@ -12,6 +12,10 @@ export interface Project {
   description: string;
   image: string;
   github: string;
+  links?: Array<{
+    label: string;
+    url: string;
+  }>;
   technologies: string[];
   featured: boolean;
   category: string;

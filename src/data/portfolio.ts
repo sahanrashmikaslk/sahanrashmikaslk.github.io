@@ -122,60 +122,102 @@ export const portfolioData: PortfolioData = {
   ],
 
   skills: {
-    "Programming Languages": [
-      { name: "C, C++, C#", level: "Experienced" },
-      { name: "Java, Python", level: "Intermediate" },
-      { name: "JavaScript, TypeScript, CSS", level: "Intermediate" },
-      { name: "x86 Assembly, VHDL, Verilog", level: "Basic" },
-      { name: "CUDA C/C++", level: "Intermediate" }
+    "Languages": [
+      { name: "Python", level: "Advanced" },
+      { name: "TypeScript / JavaScript", level: "Intermediate" },
+      { name: "C / C++", level: "Intermediate" },
+      { name: "C#", level: "Intermediate" },
+      { name: "Java", level: "Intermediate" },
+      { name: "CUDA C/C++", level: "Intermediate" },
+      { name: "VHDL / Verilog", level: "Basic" }
     ],
-    "Web Development": [
-      { name: "Web Technologies", level: "React.js, Angular.js, Node.js, Express.js, Spring Boot" },
-      { name: "UI/UX Designing", level: "Figma, WPF, Flutter" },
-      { name: "Database Designing", level: "PostgreSQL, MySQL, MongoDB" }
+    "Frontend & UI": [
+      { name: "React + Vite", level: "Intermediate" },
+      { name: "Tailwind CSS", level: "Intermediate" },
+      { name: "Flutter", level: "Intermediate" },
+      { name: "WPF", level: "Intermediate" },
+      { name: "Figma", level: "Intermediate" }
     ],
-    "Cloud & DevOps": [
-      { name: "Google Cloud Platform (GCP)", level: "Google Kubernetes Engine (GKE), Cloud Load Balancer, Container Registry" },
-      { name: "Containerization", level: "Docker, Kubernetes, Microservices Architecture" },
-      { name: "CI/CD Pipelines", level: "GitHub Actions, Automated Deployment, Rolling Updates" },
-      { name: "Message Brokers", level: "RabbitMQ, Event-Driven Architecture" },
-      { name: "Caching & Databases", level: "Redis, PostgreSQL, Connection Pooling" }
+    "Backend & APIs": [
+      { name: "Node.js + Express", level: "Intermediate" },
+      { name: "FastAPI (Python)", level: "Intermediate" },
+      { name: "REST APIs", level: "Intermediate" },
+      { name: "Auth (JWT, bcrypt)", level: "Intermediate" },
+      { name: "Spring Boot", level: "Basic" }
     ],
-    "Tools & Frameworks": [
-      { name: "Git, VS Code, Jira, GitHub, IntelliJ, Eclipse", level: "" },
-      { name: "Linux OS", level: "Intermediate" },
-      { name: "DevOps Engineering", level: "AWS, Azure, GCP" },
-      { name: "Networking", level: "Load Balancing, API Gateway, CORS, Rate Limiting" },
-      { name: "High Performance Computing", level: "OpenMP, CUDA, Parallel Programming" }
+    "Databases": [
+      { name: "MySQL", level: "Intermediate" },
+      { name: "PostgreSQL", level: "Intermediate" },
+      { name: "MongoDB", level: "Basic" },
+      { name: "Prisma ORM", level: "Intermediate" }
     ],
-    "AI Development": [
-      { name: "Machine Learning", level: "Scikit-learn, NumPy, Pandas, Matplotlib, Seaborn" },
-      { name: "Deep Learning", level: "TensorFlow, PyTorch, LSTM, Neural Networks, MobileNetV3" },
-      { name: "Multi-Task Learning", level: "Dual-Head Architecture, Joint Optimization, Quality Assessment" },
-      { name: "Computer Vision", level: "YOLOv8,  Object Detection, OCR, EasyOCR, OpenCV, Image Processing" },
-      { name: "Medical AI", level: "Healthcare Applications, Clinical Image Analysis, Diagnostic Systems" },
-      { name: "ANN & LSTM", level: "TensorFlow, PyTorch, OpenCV, Music Pattern Recognition" },
-      { name: "Network Analysis", level: "Anomaly Detection, Real-time Monitoring, Risk Assessment" },
-      { name: "AI Frameworks", level: "LangChain, LangGraph, Pydantic, Statistical Analysis" },
-      { name: "AI Development", level: "AI/ML Model Integration, Data Analysis, Predictive Modeling" }
-      
- 
+    "Cloud, DevOps & Networking": [
+      { name: "Google Cloud Platform", level: "Compute Engine, Cloud Run, Cloud SQL" },
+      { name: "Docker", level: "Intermediate" },
+      { name: "Kubernetes / GKE", level: "Basic" },
+      { name: "CI/CD", level: "GitHub Actions" },
+      { name: "Reverse Proxy", level: "Nginx" },
+      { name: "Secure Remote Access", level: "Tailscale (VPN)" }
     ],
-    "Electronics & Robotics": [
-  { name: "Embedded Systems", level: "MPLAB X, Atmel Studio" },
-  { name: "HDL", level: "VHDL, Verilog, Modelsim" },
-  { name: "Microcontrollers", level: "Arduino, NodeMCU, Raspberry PI" },
-  { name: "IOT", level: "Strong understanding of IOT, Cloud environments" },
-  { name: "ThingsBoard", level: "IoT Platform Development, Rule Chains, Data Processing" },
-  { name: "SCADA Systems", level: "Real-time Monitoring, Dashboard Development" },
-  { name: "Industrial IoT", level: "Solar Plant Monitoring, Device Management" },
-  { name: "MATLAB/Simulink", level: "Modeling, Simulation, Control Systems" },
-  { name: "PLC Programming", level: "Ladder Logic, Industrial Automation" },
-  { name: "Industrial Automation", level: "Sensors, Actuators, Process Control" }
+    "IoT & Messaging": [
+      { name: "ThingsBoard", level: "Dashboards, Rule Chains, Telemetry" },
+      { name: "MQTT", level: "Edge-to-cloud telemetry" },
+      { name: "RabbitMQ", level: "Basic" },
+      { name: "Redis", level: "Basic" }
+    ],
+    "AI/ML & Signal Processing": [
+      { name: "PyTorch / TensorFlow", level: "Intermediate" },
+      { name: "scikit-learn", level: "Intermediate" },
+      { name: "Computer Vision", level: "OpenCV, YOLOv8, EasyOCR/Tesseract" },
+      { name: "Audio DSP", level: "librosa, MFCC, FFT" },
+      { name: "Edge Inference", level: "ONNX export, on-device deployment" }
+    ],
+    "Embedded Systems": [
+      { name: "Raspberry Pi", level: "Advanced" },
+      { name: "Arduino / ESP8266", level: "Intermediate" },
+      { name: "GPIO + sensors", level: "Intermediate" },
+      { name: "MATLAB / Simulink", level: "Intermediate" }
+    ],
+    "Tools": [
+      { name: "Git / GitHub", level: "Advanced" },
+      { name: "Linux", level: "Intermediate" },
+      { name: "VS Code / IntelliJ", level: "Intermediate" },
+      { name: "Postman", level: "Intermediate" },
+      { name: "Jira", level: "Intermediate" }
     ]
   },
 
   projects: [
+    {
+      id: "neocare-fyp",
+      title: "NeoCare (FYP) - Smart Infant Incubator Monitoring & Decision Support System",
+      description: "End-to-end edge–cloud monitoring platform developed for neonatal incubator supervision. A Raspberry Pi 4B+ runs on-device ML (jaundice detection, cry detection/classification, incubator LCD reading) and an NTE rule engine to recommend safe temperature ranges. Telemetry is published via MQTT to ThingsBoard CE and visualised through role-based web dashboards (clinical, admin, parent) plus a Flutter NICU mobile app (clinicians and parents). The cloud side is deployed on Google Cloud (ThingsBoard CE hosted on a VM, with supporting services on Cloud Run and Cloud SQL) and exposed through an Nginx reverse proxy. Live video is streamed from the edge device and accessed remotely through a VPN-secured path (Tailscale), enabling clinicians and parents to view authorised feeds without opening the Pi directly to the public internet. Key system features include: real-time alarms for NTE deviations, jaundice/cry events with confidence scores, per-infant history and charts, device/edge service management via the admin portal, and a foundation to scale from a single incubator to multiple monitored units. We obtained promising quantitative results: jaundice detection 93.0% accuracy (97.6% specificity), cry detection 97.8% accuracy, cry classification 92.9% test accuracy, LCD reader 99.3% mAP@50, and NTE recommendations 100% accuracy on evaluated cases.",
+      image: "/assets/neocare.png",
+      github: "https://github.com/sahanrashmikaslk/incubator_monitoring_with_thingsboard_integration",
+      links: [
+        { label: "Edge Services (Pi)", url: "https://github.com/sahanrashmikaslk/Neonatal_incubator_edgeDevice_PI-services" },
+        { label: "Display Simulator", url: "https://github.com/sahanrashmikaslk/Neonatal_incubator_displaySimulator" },
+        { label: "ThingsBoard Backup", url: "https://github.com/sahanrashmikaslk/Neonatal_incubator_monitoring_system_TB" },
+        { label: "Jaundice Model", url: "https://github.com/sahanrashmikaslk/Neonatal_jaundice_detection" },
+        { label: "LCD Display Reader", url: "https://github.com/sahanrashmikaslk/Neonatal_incubator_displayReader" },
+        { label: "NTE Engine", url: "https://github.com/sahanrashmikaslk/NTE_recommendation_engine" },
+        { label: "Cry Model", url: "https://github.com/HasiniPrasadika/Cry-Detection-Classification-Model" },
+        { label: "NICU Mobile App", url: "https://github.com/HasiniPrasadika/NICU_Mobile_App" }
+      ],
+      technologies: ["Raspberry Pi 4B+", "Edge AI", "MQTT", "ThingsBoard CE", "GCP (Cloud Run/SQL/VM)", "Tailscale", "Nginx", "Live Streaming", "Python", "FastAPI", "React", "Flutter", "YOLOv8", "MobileNetV3"],
+      featured: true,
+      category: "Final Year Project"
+    },
+    {
+      id: "baby-cry-detection-classification",
+      title: "Baby Cry Detection & Classification - Edge AI System for Neonatal Monitoring",
+      description: "Real-time edge computing system deployed on Raspberry Pi for intelligent baby cry detection and classification, featuring a two-stage ML pipeline: YAMNet-based detection (97.8% accuracy, Threshold: 0.212) followed by ensemble classification (93% accuracy) into 5 cry types (belly pain, burping, discomfort, hungry, tired). The edge device performs FFT-based audio analysis (300-2000 Hz cry frequency range) with automatic 5-second recording, resampling from 48kHz to 16kHz, and local inference using YAMNet embeddings (2048-dim) + Logistic Regression for detection, then 111 audio features (MFCC, Chroma, Mel, Spectral) + Ensemble Voting (RF+SVM+KNN+XGBoost) for classification. Integrated with ThingsBoard IoT platform via MQTT for real-time telemetry publishing (cry status, audio levels, classification results, confidence scores). FastAPI classification service (Port 8890) handles HTTP requests with confidence thresholding (0.6), while HTTP API (Port 8888) provides monitoring and control endpoints. Developed as part of final-year research project 'Development of an Automated Condition Controlling and Monitoring System for an Infant Incubator'.",
+      image: "/assets/cry_detection_architecture.png", 
+      github: "https://github.com/sahanrashmikaslk/Cry-Detection-Classification-Model",
+      technologies: ["Python", "Raspberry Pi", "Edge Computing", "YAMNet", "TensorFlow", "Ensemble Learning", "FastAPI", "PyAudio", "Librosa", "FFT Analysis", "IoT", "MQTT", "ThingsBoard", "Real-time Audio Processing"],
+      featured: true,
+      category: "Edge AI/IoT"
+    },
     {
       id: "neonatal-jaundice-detection",
       title: "Neonatal Jaundice Detection - Dual-Head Multi-Task Learning System",
