@@ -4,7 +4,7 @@ export const portfolioData: PortfolioData = {
   name: "Sahan Lelwala",
   title: "Computer Engineer",
   email: "sahanrashmikaslk@gmail.com",
-  bio: "A final year Computer Engineering student at University of Ruhuna with expertise in embedded systems, IoT monitoring, robotics, electronics, IC design, and full-stack development. During my Magicbit internship, I mastered Embedded firmware programming for solar energy monitoring systems with IoT platforms and edge computing. I excel in bridging hardware and software domains, from low-level FPGA programming to cloud microservices. Furthermore, as an innovator, I actively engaged in IEEE activities, from organizing workshops to participating in technical events and committed to leveraging technology for positive change.",
+  bio: "A Computer Engineering graduate from University of Ruhuna with expertise in embedded systems, IoT monitoring, robotics, electronics, IC design, and full-stack development. During my Magicbit internship, I mastered Embedded firmware programming for solar energy monitoring systems with IoT platforms and edge computing. I excel in bridging hardware and software domains, from low-level FPGA programming to cloud microservices. Furthermore, as an innovator, I actively engaged in IEEE activities, from organizing workshops to participating in technical events and committed to leveraging technology for positive change.",
   
   social: {
     linkedin: "https://linkedin.com/in/sahan-lelwala/",
@@ -17,7 +17,7 @@ export const portfolioData: PortfolioData = {
     {
       degree: "BSc.(Hons) in Computer Engineering",
       institution: "University of Ruhuna, SL",
-      period: "2021 - Present",
+      period: "2021 - 2026",
       current: true
     },
     {
