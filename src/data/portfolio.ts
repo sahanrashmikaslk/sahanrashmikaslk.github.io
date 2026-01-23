@@ -23,7 +23,7 @@ export const portfolioData: PortfolioData = {
     {
       degree: "High School",
       institution: "Kingswood College, Kandy",
-      period: "2006 - 2020",
+      period: "2019 A/L",
       current: false
     }
   ],
